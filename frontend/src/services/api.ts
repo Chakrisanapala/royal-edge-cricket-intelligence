@@ -1,12 +1,46 @@
-// Support VITE_API_URL for Render backend or fallback to /api (Netlify proxy / local Vite)
+// Default production backend URL on Render
+const DEFAULT_PROD_API = 'https://royal-edge-backend.onrender.com/api';
+
+/**
+ * Resolves the centralized API base URL.
+ * Priority:
+ * 1. import.meta.env.VITE_API_URL (if explicitly provided in build/runtime env)
+ * 2. Production build or Netlify origin -> DEFAULT_PROD_API (https://royal-edge-backend.onrender.com/api)
+ * 3. Local development -> '/api' (proxied by Vite dev server to localhost:8000)
+ */
 const getApiBase = (): string => {
   const envUrl = (import.meta.env.VITE_API_URL as string | undefined)?.trim();
-  if (!envUrl) return '/api';
-  const clean = envUrl.replace(/\/$/, '');
-  return clean.endsWith('/api') ? clean : `${clean}/api`;
+  if (envUrl) {
+    const clean = envUrl.replace(/\/$/, '');
+    return clean.endsWith('/api') ? clean : `${clean}/api`;
+  }
+  // Production build or running on Netlify: default directly to Render backend
+  if (
+    import.meta.env.PROD ||
+    (typeof window !== 'undefined' && window.location.hostname.includes('netlify.app'))
+  ) {
+    return DEFAULT_PROD_API;
+  }
+  // Local development fallback
+  return '/api';
 };
 
-const API_BASE = getApiBase();
+export const API_BASE = getApiBase();
+
+/**
+ * Robust fetch wrapper that produces user-friendly error messages if Render is cold-starting
+ * or network connectivity is interrupted.
+ */
+async function safeFetch(url: string, init?: RequestInit): Promise<Response> {
+  try {
+    return await fetch(url, init);
+  } catch (err: any) {
+    throw new Error(
+      `Network connection to ROYAL EDGE backend failed (${url}). ` +
+      `If the backend is waking up from Render's free tier sleep, please allow 30–60 seconds and refresh: ${err.message || err}`
+    );
+  }
+}
 
 /**
  * Validates and parses API responses.
@@ -31,7 +65,7 @@ async function handleResponse<T>(res: Response, errorMsg: string): Promise<T> {
   if (!contentType.includes('application/json')) {
     throw new Error(
       `Invalid response from API (${res.url}). Expected application/json but received ${contentType || 'HTML'}. ` +
-      `Please ensure your Render backend is deployed and VITE_API_URL is configured in Netlify.`
+      `The backend service may be spinning up. Check live status at https://royal-edge-backend.onrender.com/api/health.`
     );
   }
 
@@ -141,7 +175,7 @@ export interface CompareResult {
 
 export const api = {
   async getOverview(): Promise<OverviewData> {
-    const res = await fetch(`${API_BASE}/overview`);
+    const res = await safeFetch(`${API_BASE}/overview`);
     return handleResponse<OverviewData>(res, 'Failed to load overview data');
   },
 
@@ -151,7 +185,7 @@ export const api = {
     if (search) params.append('search', search);
     params.append('sort_by', sortBy);
     params.append('ascending', String(ascending));
-    const res = await fetch(`${API_BASE}/players/batters?${params.toString()}`);
+    const res = await safeFetch(`${API_BASE}/players/batters?${params.toString()}`);
     return handleResponse<Batter[]>(res, 'Failed to load batters');
   },
 
@@ -161,32 +195,32 @@ export const api = {
     if (search) params.append('search', search);
     params.append('sort_by', sortBy);
     params.append('ascending', String(ascending));
-    const res = await fetch(`${API_BASE}/players/bowlers?${params.toString()}`);
+    const res = await safeFetch(`${API_BASE}/players/bowlers?${params.toString()}`);
     return handleResponse<Bowler[]>(res, 'Failed to load bowlers');
   },
 
   async getPlayerProfile(playerId: number): Promise<any> {
-    const res = await fetch(`${API_BASE}/players/${playerId}`);
+    const res = await safeFetch(`${API_BASE}/players/${playerId}`);
     return handleResponse<any>(res, `Player ${playerId} not found`);
   },
 
   async comparePlayers(playerAId: number, playerBId: number, playerType: 'batter' | 'bowler'): Promise<CompareResult> {
-    const res = await fetch(`${API_BASE}/compare?player_a_id=${playerAId}&player_b_id=${playerBId}&player_type=${playerType}`);
+    const res = await safeFetch(`${API_BASE}/compare?player_a_id=${playerAId}&player_b_id=${playerBId}&player_type=${playerType}`);
     return handleResponse<CompareResult>(res, 'Failed to compare players');
   },
 
   async getPressureSummary(): Promise<any> {
-    const res = await fetch(`${API_BASE}/pressure/summary`);
+    const res = await safeFetch(`${API_BASE}/pressure/summary`);
     return handleResponse<any>(res, 'Failed to load pressure summary');
   },
 
   async getAuctionTargets(): Promise<any[]> {
-    const res = await fetch(`${API_BASE}/auction/targets`);
+    const res = await safeFetch(`${API_BASE}/auction/targets`);
     return handleResponse<any[]>(res, 'Failed to load auction targets');
   },
 
   async simulateAuction(remainingPurse: number, bids: Record<string, number>): Promise<any> {
-    const res = await fetch(`${API_BASE}/auction/simulate`, {
+    const res = await safeFetch(`${API_BASE}/auction/simulate`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ remaining_purse: remainingPurse, bids })
@@ -195,7 +229,7 @@ export const api = {
   },
 
   async getMethodology(): Promise<any> {
-    const res = await fetch(`${API_BASE}/methodology`);
+    const res = await safeFetch(`${API_BASE}/methodology`);
     return handleResponse<any>(res, 'Failed to load methodology');
   }
 };

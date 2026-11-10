@@ -7,6 +7,14 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  VITE_API_URL = "https://royal-edge-backend.onrender.com/api"
+
+# Proxy /api requests directly to Render backend
+[[redirects]]
+  from = "/api/*"
+  to = "https://royal-edge-backend.onrender.com/api/:splat"
+  status = 200
+  force = true
 
 # React Router handles application routes in the browser (SPA Fallback)
 [[redirects]]
