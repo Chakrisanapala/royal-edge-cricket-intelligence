@@ -1,0 +1,32 @@
+# Node & Frontend dependencies
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.eslintcache
+*.tsbuildinfo
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# System and logs
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+scratch/
+.system_generated/
+
+# Environment secrets
+.env
+.env.local
+.env.*.local

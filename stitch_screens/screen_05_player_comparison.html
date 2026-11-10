@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ROYAL EDGE | Player Comparison - Head-to-Head Pressure Radar</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface": "#051424",
+            "on-tertiary": "#00354a",
+            "on-background": "#d4e4fa",
+            "tertiary-fixed-dim": "#7bd0ff",
+            "on-tertiary-container": "#002d40",
+            "on-primary-container": "#59002b",
+            "surface-container": "#122131",
+            "tertiary-fixed": "#c4e7ff",
+            "surface-dim": "#051424",
+            "surface-container-high": "#1c2b3c",
+            "secondary-container": "#bd8718",
+            "on-secondary": "#432c00",
+            "on-secondary-container": "#3a2600",
+            "tertiary-container": "#009bd1",
+            "on-surface": "#d4e4fa",
+            "error-container": "#93000a",
+            "primary-container": "#ff4994",
+            "background": "#051424",
+            "on-surface-variant": "#e3bdc6",
+            "outline": "#aa8890",
+            "secondary": "#fabc4d",
+            "surface-container-highest": "#273647",
+            "surface-container-lowest": "#010f1f",
+            "secondary-fixed-dim": "#fabc4d",
+            "surface-variant": "#273647",
+            "inverse-on-surface": "#233143",
+            "surface-tint": "#ffb1c7",
+            "on-secondary-fixed": "#281900",
+            "on-tertiary-fixed-variant": "#004c69",
+            "on-primary-fixed": "#3e001d",
+            "surface-container-low": "#0d1c2d",
+            "on-primary": "#650032",
+            "on-secondary-fixed-variant": "#604100",
+            "secondary-fixed": "#ffdead",
+            "inverse-primary": "#ba0061",
+            "primary": "#ffb1c7",
+            "on-error": "#690005",
+            "on-primary-fixed-variant": "#8e0049",
+            "surface-bright": "#2c3a4c",
+            "tertiary": "#7bd0ff",
+            "on-error-container": "#ffdad6",
+            "primary-fixed": "#ffd9e2",
+            "inverse-surface": "#d4e4fa",
+            "primary-fixed-dim": "#ffb1c7",
+            "outline-variant": "#5b3f47",
+            "on-tertiary-fixed": "#001e2c",
+            "error": "#ffb4ab"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-md": "0.75rem",
+            "gutter-desktop": "1.25rem",
+            "space-xl": "1.5rem",
+            "space-xs": "0.25rem",
+            "margin-desktop": "2rem",
+            "space-lg": "1rem",
+            "margin": "1rem",
+            "gutter": "1rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "metric-display": ["Inter"],
+            "headline-lg": ["Inter"],
+            "label-xs": ["Inter"],
+            "label-md": ["Inter"],
+            "title-md": ["Inter"],
+            "body-sm": ["Inter"],
+            "headline-md": ["Inter"],
+            "headline-sm": ["Inter"],
+            "body-md": ["Inter"],
+            "body-lg": ["Inter"],
+            "metric-sm": ["Inter"],
+            "display-lg": ["Inter"]
+          },
+          "fontSize": {
+            "metric-display": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "label-xs": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "metric-sm": ["18px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      font-size: 18px;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #051424;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #273647;
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #5b3f47;
+    }
+    .glow-pink {
+      box-shadow: 0 0 16px rgba(255, 73, 148, 0.35);
+    }
+    .glow-gold {
+      box-shadow: 0 0 16px rgba(250, 188, 77, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased overflow-x-hidden min-h-screen flex selection:bg-primary-container selection:text-white">
+<!-- LEFT SIDEBAR: Shared Component SideNavBar -->
+<aside class="fixed top-0 left-0 h-screen w-[260px] flex flex-col z-40 border-r border-outline-variant/30 bg-surface-container-low">
+<div class="w-[260px] min-w-[260px] h-full flex flex-col justify-between p-4 overflow-y-auto custom-scrollbar">
+<!-- Brand Crest & Header -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 pb-3 border-b border-outline-variant/20">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center p-1.5 shadow-inner">
+<img class="w-full h-full object-contain" data-alt="Official Rajasthan Royals gold and royal pink heraldic lion crest insignia on a dark hexagonal badge background, sports franchise brand emblem" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK7f1qG-8Wak7EEiff51FKuJrZIzZqJAczkBUpDvXdbo7Gxc-oHGsqYg51e3l1HinPEhkqDn7YS1f1w5nVyYf9G2EEuELZ0kij8C0DsECVPfaI1N36lHmf19-uxP_mYCJBGBau2xsE2cv2mC4pnNAE8CcMhD3a898VwfkA-Ir4PxPIotH1_EckhCKbbqkmeE0U8xUk6kNik_Kbg6eQSgFMKM4MU8PNmJsN4LCoVupkRqKLPbCw1k8Fee8mMrLpcCx3_2qNeoX2uUs"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary">ROYAL EDGE</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">IPL 2027 Auction Intelligence</span>
+</div>
+</div>
+<!-- Live Bid Room CTA -->
+<button class="w-full flex items-center justify-between px-3.5 py-2.5 bg-primary-container hover:bg-primary-container/90 text-white rounded-lg font-headline-sm text-title-md transition-all duration-150 glow-pink active:scale-[0.98]">
+<span class="flex items-center gap-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+</span>
+<span class="font-title-md text-title-md tracking-wide">Live Bid Room</span>
+</span>
+<span class="material-symbols-outlined text-white">gavel</span>
+</button>
+<!-- 8 Navigation Tabs -->
+<nav class="flex flex-col gap-1 mt-1">
+<!-- 1: Executive Overview -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-normal hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors duration-150 active:scale-[0.99]" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Executive Overview</span>
+</a>
+<!-- 2: Pressure Intelligence -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-normal hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors duration-150 active:scale-[0.99]" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="font-label-md text-label-md">Pressure Intelligence</span>
+</a>
+<!-- 3: Batting Analytics -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-normal hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors duration-150 active:scale-[0.99]" href="#">
+<span class="material-symbols-outlined">sports_cricket</span>
+<span class="font-label-md text-label-md">Batting Analytics</span>
+</a>
+<!-- 4: Bowling Analytics -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-normal hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors duration-150 active:scale-[0.99]" href="#">
+<span class="material-symbols-outlined">sports_baseball</span>
+<span class="font-label-md text-label-md">Bowling Analytics</span>
+</a>
+<!-- 5: Player Comparison (ACTIVE matching JSON styles) -->
+<a class="flex items-center gap-3 px-3 py-2 text-primary font-semibold bg-surface-container-highest/60 border-l-2 border-primary rounded-r-lg active:scale-[0.99] transition-transform duration-100 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">compare_arrows</span>
+<span class="font-label-md text-label-md">Player Comparison</span>
+</a>
+<!-- 6: Auction War Room -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-normal hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors duration-150 active:scale-[0.99]" href="#">
+<span class="material-symbols-outlined">gavel</span>
+<span class="font-label-md text-label-md">Auction War Room</span>
+</a>
+<!-- 7: Player Profile -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-normal hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors duration-150 active:scale-[0.99]" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md">Player Profile</span>
+</a>
+<!-- 8: Methodology -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-normal hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors duration-150 active:scale-[0.99]" href="#">
+<span class="material-symbols-outlined">science</span>
+<span class="font-label-md text-label-md">Methodology</span>
+</a>
+</nav>
+</div>
+<!-- Footer Elements -->
+<div class="flex flex-col gap-3 pt-3 border-t border-outline-variant/20">
+<!-- Diagnostic Status -->
+<div class="px-3 py-2 rounded-lg bg-surface-container-lowest border border-outline-variant/30 flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">terminal</span>
+<span class="font-label-xs text-label-xs">Hawk-Eye v4.2</span>
+</div>
+<span class="font-label-xs text-label-xs text-tertiary">99.98% Sync</span>
+</div>
+<!-- Strategist Profile -->
+<div class="flex items-center gap-3 px-2 py-1.5">
+<div class="w-8 h-8 rounded-full border border-secondary/50 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait of an elite cricket franchise lead analytics director with tactical headset in a high-tech dark analytics room with illuminated screens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATJnW7qyGkeJmNSXgIp-mRnCd_rVYyUCBdj5h-XHMwU-y8Ux86SaQkspqrpRy6ZOkdLY2iSX4Tkh8uPoGWgxe7nXmAUPApmUqzsafUhb771J9v6O32JC3hMoipZIR9J9D8HFDkOpQMIB0NuMjrsvdWASUYG6pNn0OCMz03k16YfMrTSi-e-8JjXrvPyxYlLrmQ_vsBOvFUvRbfE5QamzXzYrGBMtzxxTdBIrnPqXH8zNlB8zISGIEfgOz8UM6IW2H7UBlFefAnU9k"/>
+</div>
+<div class="flex flex-col overflow-hidden">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">G. Giles (Lead Analyst)</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant truncate">Secured Level-3 War Room</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- TOP APP BAR: Shared Component TopNavBar -->
+<header class="fixed top-0 left-[260px] right-0 h-16 z-30 border-b border-outline-variant/30 bg-surface-container-lowest flex items-center justify-between px-6">
+<!-- Left: Subsystem Breadcrumbs & Quick Filters -->
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span>Analytics Subsystem</span>
+<span class="text-outline">/</span>
+<span>Stress Metric</span>
+<span class="text-outline">/</span>
+<span class="text-primary font-semibold">Player Comparison Engine</span>
+</div>
+<div class="h-4 w-px bg-outline-variant/40 mx-1"></div>
+<!-- Category Filter Pills -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg border border-outline-variant/30">
+<button class="px-2.5 py-1 text-primary font-semibold text-label-xs font-label-xs bg-surface-container-highest rounded border border-primary/30">
+          Batters vs Batters
+        </button>
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface text-label-xs font-label-xs rounded transition-colors">
+          Bowlers vs Bowlers
+        </button>
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface text-label-xs font-label-xs rounded transition-colors">
+          All-Rounders
+        </button>
+</div>
+<!-- Venue Context Dropdown -->
+<div class="flex items-center gap-1.5 px-3 py-1 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface text-label-xs font-label-xs">
+<span class="material-symbols-outlined text-tertiary">stadium</span>
+<span>SMS Jaipur (Home Conditions)</span>
+<span class="material-symbols-outlined text-outline">arrow_drop_down</span>
+</div>
+</div>
+<!-- Right: Telemetry & Actions -->
+<div class="flex items-center gap-4">
+<!-- Live Metrics Telemetry Strip -->
+<div class="flex items-center gap-4 text-label-xs font-label-xs">
+<div class="flex items-center gap-2 px-2.5 py-1 bg-surface-container-low border border-outline-variant/30 rounded">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-on-surface-variant">War Room Pulse:</span>
+<span class="text-secondary font-bold">ACTIVE</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low border border-outline-variant/30 rounded">
+<span class="text-on-surface-variant">Purse Rem:</span>
+<span class="text-tertiary font-bold">₹38.40 Cr</span>
+<span class="text-outline">/ ₹42.80 Cr</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low border border-outline-variant/30 rounded">
+<span class="text-on-surface-variant">Slots:</span>
+<span class="text-on-surface font-bold">7/8</span>
+<span class="text-primary font-bold">(2 OS Free)</span>
+</div>
+</div>
+<div class="h-4 w-px bg-outline-variant/40"></div>
+<!-- Actions -->
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high border border-outline-variant/40 text-on-surface rounded text-label-xs font-label-xs flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-tertiary">picture_as_pdf</span>
+<span>Export PDF Dossier</span>
+</button>
+<button class="px-3 py-1.5 bg-primary-container hover:bg-primary-container/90 text-white rounded text-label-xs font-label-xs font-semibold flex items-center gap-1.5 glow-pink transition-transform active:scale-[0.98]">
+<span class="material-symbols-outlined">network_check</span>
+<span>Simulate Bid War</span>
+</button>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<button class="p-1.5 hover:bg-surface-container rounded text-on-surface transition-colors" title="Notifications">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-1.5 hover:bg-surface-container rounded text-on-surface transition-colors" title="Settings Tune">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</div>
+</header>
+<!-- MAIN CANVAS WORKSPACE -->
+<main class="ml-[260px] mt-16 p-6 w-[calc(100%-260px)] min-h-[calc(100vh-64px)] flex flex-col gap-6">
+<!-- PAGE HERO & SUB-HEADER -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-3">
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">Player Comparison</h1>
+<span class="px-2.5 py-0.5 rounded-full text-label-xs font-label-xs uppercase font-bold tracking-wider bg-primary-container/20 text-primary border border-primary/30">Head-to-Head Pressure Radar</span>
+<span class="px-2 py-0.5 rounded text-label-xs font-label-xs bg-surface-container-high text-tertiary border border-outline-variant/30">Model BPRI v3.88</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Multi-variable stochastic evaluation against high-leverage Death &amp; Collapse game states under IPL conditions.</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded-lg border border-outline-variant/30 text-label-xs font-label-xs">
+<span class="text-on-surface-variant">Bootstrap Samples:</span>
+<span class="text-secondary font-semibold">10,000 Iterations</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded-lg border border-outline-variant/30 text-label-xs font-label-xs">
+<span class="text-on-surface-variant">Confidence Band:</span>
+<span class="text-tertiary font-semibold">95% Bayesian HPD</span>
+</div>
+</div>
+</div>
+<!-- SAMPLE DIVERGENCE & SSSI WARNING BANNER -->
+<section class="bg-surface-container-low border-l-4 border-secondary border-t border-r border-b border-outline-variant/30 rounded-lg p-4 flex items-start justify-between gap-4">
+<div class="flex items-start gap-3">
+<div class="p-2 rounded bg-secondary/10 text-secondary border border-secondary/20 flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<h4 class="font-title-md text-title-md text-secondary font-bold">Sample Divergence &amp; Statistical Saturation Notice (10,000x Bayesian Bootstrap)</h4>
+<span class="px-2 py-0.2 bg-secondary/20 text-secondary text-label-xs font-label-xs rounded font-semibold uppercase">SSSI Verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Data integrity protocol active: Both profiles demonstrate <span class="text-on-surface font-semibold">99.0% Sample Saturation Index (SSSI)</span> across IPL 2024-2026 match iterations. Ashutosh Sharma (312 High-Pressure deliveries) meets full statistical convergence standards alongside Suryakumar Yadav's international apex dataset (488 High-Pressure balls). Confidence interval variances reflect true tactical volatility rather than sample scarcity.
+          </p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded transition-colors" title="Dismiss Notice">
+<span class="material-symbols-outlined text-outline">close</span>
+</button>
+</section>
+<!-- DUAL HERO PLAYER COMPARISON CARDS -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-5 items-stretch">
+<!-- PLAYER A: ASHUTOSH SHARMA -->
+<div class="xl:col-span-5 bg-surface-container-low border-2 border-primary-container/60 rounded-lg p-5 flex flex-col justify-between relative overflow-hidden group shadow-lg">
+<div class="absolute -right-16 -top-16 w-48 h-48 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div>
+<!-- Header Row -->
+<div class="flex items-start justify-between gap-4 pb-4 border-b border-outline-variant/30">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-surface-container-high border-2 border-primary/50 overflow-hidden relative shadow-md">
+<img class="w-full h-full object-cover" data-alt="Action portrait of young Indian explosive power-hitter batsman Ashutosh Sharma in cricket kit with helmet looking focused under stadium floodlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTRRZa-twLYwL6hLennrBz-sjbwnSMSNeeQztJMnRVsNRZLPsa0fWdyQukCarKwQtXVhxwwOW3Zwx8AGS_RaFlhvlBP5K8RVGozHLbk6Vc6YGlM0ifFsahhkY5ncg8Z_arZ1ldWxgqq2HMa7zlsQO2EsjvjqA_o-lfRPHiiPaBRqwEirntUKzYMHkpNZYWE3vtsiXCEkC1h5nmPs95osbSJ1OCgrs5Ms1I4R89c6xZSB2pghct_fqfrCBOBuhXv-h6fWVWKMOYsqQ"/>
+<div class="absolute bottom-0 right-0 px-1 bg-surface-container-lowest text-primary font-bold text-label-xs font-label-xs">RHB</div>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-label-xs font-label-xs font-bold bg-primary-container/20 text-primary border border-primary/30">Target Priority A</span>
+<span class="px-2 py-0.5 rounded text-label-xs font-label-xs bg-surface-container text-on-surface-variant">DC / PBKS Pool</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mt-1">Ashutosh Sharma</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Designated Finisher • Age 26 • Domestic Marquee</p>
+</div>
+</div>
+<!-- Valuation Pill -->
+<div class="text-right">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Target Ceiling</span>
+<p class="font-metric-sm text-metric-sm font-bold text-primary">₹7.50 - 9.20 Cr</p>
+<span class="font-label-xs text-label-xs text-secondary font-semibold">44.5% Cap Cost vs Apex</span>
+</div>
+</div>
+<!-- Highlight Key Metrics Grid -->
+<div class="grid grid-cols-3 gap-3 my-4">
+<div class="bg-surface-container p-3 rounded border border-outline-variant/30">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider block">BPRI Score</span>
+<span class="font-metric-display text-metric-display text-primary font-bold">78.22</span>
+<span class="font-label-xs text-label-xs text-secondary block mt-0.5">Rank #1 Lower Death</span>
+</div>
+<div class="bg-surface-container p-3 rounded border border-outline-variant/30">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider block">HP Strike Rate</span>
+<span class="font-metric-display text-metric-display text-on-surface font-bold">168.62</span>
+<span class="font-label-xs text-label-xs text-tertiary block mt-0.5">+14.2% vs Phase Par</span>
+</div>
+<div class="bg-surface-container p-3 rounded border border-outline-variant/30">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider block">Death SR (17-20)</span>
+<span class="font-metric-display text-metric-display text-on-surface font-bold">192.83</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant block mt-0.5">312 Balls Sample</span>
+</div>
+</div>
+<!-- 95% Confidence Interval Display -->
+<div class="space-y-1.5 bg-surface-container-lowest p-3 rounded border border-outline-variant/20">
+<div class="flex justify-between items-center text-label-xs font-label-xs">
+<span class="text-on-surface-variant">95% Bayesian Confidence Interval (HP Strike Rate)</span>
+<span class="text-primary font-bold">[148.67 — 189.74] • Median 168.62</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full relative overflow-hidden">
+<div class="absolute h-full bg-primary-container rounded-full" style="left: 45%; width: 38%;"></div>
+<div class="absolute top-0 bottom-0 w-1 bg-white" style="left: 64%;"></div>
+</div>
+<div class="flex justify-between text-label-xs font-label-xs text-outline">
+<span>120.00 SR</span>
+<span>160.00 SR</span>
+<span>220.00 SR</span>
+</div>
+</div>
+</div>
+<!-- Signature Trait & Badges -->
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">bolt</span>
+<span class="text-on-surface font-medium">Trait:</span>
+<span class="text-on-surface-variant">Elite boundary hitting vs 140+ kph hard length</span>
+</div>
+<span class="px-2 py-0.5 bg-tertiary/10 text-tertiary border border-tertiary/25 rounded text-label-xs font-label-xs font-bold">SSSI 99.0%</span>
+</div>
+</div>
+<!-- VS BADGE & DELTA SUMMARY CENTER -->
+<div class="xl:col-span-2 flex flex-col justify-center items-center gap-4 bg-surface-container-low border border-outline-variant/30 rounded-lg p-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest border-2 border-outline-variant flex items-center justify-center shadow-lg">
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">VS</span>
+</div>
+<div class="text-center space-y-1">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-outline">Strategic Variance</span>
+<p class="font-title-md text-title-md font-bold text-on-surface">Floor vs Ceiling</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Finisher Arbitrage Analysis</p>
+</div>
+<div class="w-full space-y-2 py-2 border-y border-outline-variant/20">
+<div class="flex justify-between items-center text-label-xs font-label-xs">
+<span class="text-primary font-bold">Ashutosh</span>
+<span class="text-outline">Metric</span>
+<span class="text-secondary font-bold">Surya</span>
+</div>
+<div class="flex justify-between items-center text-label-xs font-label-xs bg-surface-container px-2 py-1 rounded">
+<span class="text-primary font-bold">+1.32</span>
+<span class="text-on-surface-variant">BPRI Edge</span>
+<span class="text-outline">-</span>
+</div>
+<div class="flex justify-between items-center text-label-xs font-label-xs bg-surface-container px-2 py-1 rounded">
+<span class="text-outline">-</span>
+<span class="text-on-surface-variant">Death Accel</span>
+<span class="text-secondary font-bold">+24.3 SR</span>
+</div>
+<div class="flex justify-between items-center text-label-xs font-label-xs bg-surface-container px-2 py-1 rounded">
+<span class="text-primary font-bold">+4.2 Avg</span>
+<span class="text-on-surface-variant">Collapse Floor</span>
+<span class="text-outline">-</span>
+</div>
+</div>
+<button class="w-full py-2 bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant/40 text-on-surface rounded text-label-xs font-label-xs font-semibold transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm">swap_horiz</span>
+<span>Swap Benchmark</span>
+</button>
+</div>
+<!-- PLAYER B: SURYAKUMAR YADAV -->
+<div class="xl:col-span-5 bg-surface-container-low border-2 border-secondary/40 rounded-lg p-5 flex flex-col justify-between relative overflow-hidden group shadow-lg">
+<div class="absolute -right-16 -top-16 w-48 h-48 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div>
+<!-- Header Row -->
+<div class="flex items-start justify-between gap-4 pb-4 border-b border-outline-variant/30">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-surface-container-high border-2 border-secondary/50 overflow-hidden relative shadow-md">
+<img class="w-full h-full object-cover" data-alt="Portrait of legendary Indian 360 degree cricket batter Suryakumar Yadav wearing team jersey with confident intense expression in stadium ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_VjvrHQDzb2E65NVFHLZjcRnZPemZxurIg-WAHdVQROCBab8KrDJvHFnV63w5MpFtERNUPgUCLi52mvXV_8GEJqNKBNFu4rFQzNKCzKbauZZzqi_h6sG16gwPdx1JK-P5wQaC6SI-cXcF1Q_7wHJlx3pu6wc363PnvxoQ5tOfNLT_nmwbJV08pZy3qyd2OhLouXc8YwTIIyvSnGd152h1TYpnpAosE6ZcUtwaeX0cMADNHa4tEndYAV1bsvElZKLEtSirapUuMEU"/>
+<div class="absolute bottom-0 right-0 px-1 bg-surface-container-lowest text-secondary font-bold text-label-xs font-label-xs">RHB</div>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-label-xs font-label-xs font-bold bg-secondary/20 text-secondary border border-secondary/30">Benchmark Tier 0</span>
+<span class="px-2 py-0.5 rounded text-label-xs font-label-xs bg-surface-container text-on-surface-variant">MI Retained Apex</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mt-1">Suryakumar Yadav</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Middle-Order Aggressor • Age 34 • Apex International</p>
+</div>
+</div>
+<!-- Valuation Pill -->
+<div class="text-right">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Retained Valuation</span>
+<p class="font-metric-sm text-metric-sm font-bold text-secondary">₹18.00 Cr +</p>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Market Ceiling Benchmark</span>
+</div>
+</div>
+<!-- Highlight Key Metrics Grid -->
+<div class="grid grid-cols-3 gap-3 my-4">
+<div class="bg-surface-container p-3 rounded border border-outline-variant/30">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider block">BPRI Score</span>
+<span class="font-metric-display text-metric-display text-secondary font-bold">76.90</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant block mt-0.5">Rank #3 Mid-Transition</span>
+</div>
+<div class="bg-surface-container p-3 rounded border border-outline-variant/30">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider block">HP Strike Rate</span>
+<span class="font-metric-display text-metric-display text-on-surface font-bold">182.69</span>
+<span class="font-label-xs text-label-xs text-secondary block mt-0.5">+24.8% vs Phase Par</span>
+</div>
+<div class="bg-surface-container p-3 rounded border border-outline-variant/30">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider block">Death SR (17-20)</span>
+<span class="font-metric-display text-metric-display text-on-surface font-bold">217.17</span>
+<span class="font-label-xs text-label-xs text-secondary block mt-0.5">Apex Acceleration</span>
+</div>
+</div>
+<!-- 95% Confidence Interval Display -->
+<div class="space-y-1.5 bg-surface-container-lowest p-3 rounded border border-outline-variant/20">
+<div class="flex justify-between items-center text-label-xs font-label-xs">
+<span class="text-on-surface-variant">95% Bayesian Confidence Interval (HP Strike Rate)</span>
+<span class="text-secondary font-bold">[170.25 — 194.43] • Median 182.69</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full relative overflow-hidden">
+<div class="absolute h-full bg-secondary rounded-full" style="left: 60%; width: 28%;"></div>
+<div class="absolute top-0 bottom-0 w-1 bg-white" style="left: 72%;"></div>
+</div>
+<div class="flex justify-between text-label-xs font-label-xs text-outline">
+<span>120.00 SR</span>
+<span>160.00 SR</span>
+<span>220.00 SR</span>
+</div>
+</div>
+</div>
+<!-- Signature Trait & Badges -->
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">flare</span>
+<span class="text-on-surface font-medium">Trait:</span>
+<span class="text-on-surface-variant">360° scoop &amp; ramp execution vs death yorkers</span>
+</div>
+<span class="px-2 py-0.5 bg-secondary/10 text-secondary border border-secondary/25 rounded text-label-xs font-label-xs font-bold">SSSI 99.0%</span>
+</div>
+</div>
+</section>
+<!-- 6-PILLAR PRESSURE RADAR & TACTICAL CALLOUTS -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-5 items-stretch">
+<!-- Interactive Radar Card (7 cols) -->
+<div class="xl:col-span-7 bg-surface-container-low border border-outline-variant/30 rounded-lg p-5 flex flex-col justify-between">
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/20">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">radar</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">6-Pillar Pressure Geometry Radar</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hexagonal vector model mapped to standard deviation percentiles (100 = 99th %tile IPL).</p>
+</div>
+<!-- Radar Legend -->
+<div class="flex items-center gap-4 text-label-xs font-label-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-primary-container inline-block"></span>
+<span class="text-on-surface font-semibold">Ashutosh Sharma (Target)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-1 bg-secondary inline-block border-t border-dashed"></span>
+<span class="text-secondary font-semibold">Suryakumar Yadav (Apex)</span>
+</div>
+</div>
+</div>
+<!-- SVG Hex Radar Chart -->
+<div class="relative py-4 flex items-center justify-center">
+<svg class="w-full max-w-[460px] h-[340px] overflow-visible" viewbox="0 0 500 420">
+<!-- Concentric Grid Polygons -->
+<!-- 20% ring -->
+<polygon fill="none" points="250,170 302,200 302,260 250,290 198,260 198,200" stroke="#1c2b3c" stroke-width="1"></polygon>
+<!-- 40% ring -->
+<polygon fill="none" points="250,130 354,190 354,310 250,370 146,310 146,190" stroke="#1c2b3c" stroke-width="1"></polygon>
+<!-- 60% ring -->
+<polygon fill="none" points="250,90 406,180 406,360 250,450 94,360 94,180" stroke="#273647" stroke-dasharray="3,3" stroke-width="1"></polygon>
+<!-- 80% ring -->
+<polygon fill="none" points="250,50 458,170 458,410 250,530 42,410 42,170" stroke="#273647" stroke-width="1" transform="scale(0.8) translate(62, 50)"></polygon>
+<!-- 100% Perimeter -->
+<polygon fill="#0d1c2d" fill-opacity="0.3" points="250,20 423,120 423,320 250,420 77,320 77,120" stroke="#5b3f47" stroke-width="1.5"></polygon>
+<!-- Radial Axis Lines -->
+<line stroke="#273647" stroke-width="1.5" x1="250" x2="250" y1="220" y2="20"></line>
+<line stroke="#273647" stroke-width="1.5" x1="250" x2="423" y1="220" y2="120"></line>
+<line stroke="#273647" stroke-width="1.5" x1="250" x2="423" y1="220" y2="320"></line>
+<line stroke="#273647" stroke-width="1.5" x1="250" x2="250" y1="220" y2="420"></line>
+<line stroke="#273647" stroke-width="1.5" x1="250" x2="77" y1="220" y2="320"></line>
+<line stroke="#273647" stroke-width="1.5" x1="250" x2="77" y1="220" y2="120"></line>
+<!-- Axis Labels -->
+<!-- 1. Top: High-Pressure Strike Rate -->
+<text class="text-[11px] font-semibold" fill="#d4e4fa" text-anchor="middle" x="250" y="8">1. HP Strike Rate</text>
+<!-- 2. Top-Right: HP Average -->
+<text class="text-[11px] font-semibold" fill="#d4e4fa" text-anchor="start" x="435" y="115">2. HP Average</text>
+<!-- 3. Bottom-Right: Death Phase Impact -->
+<text class="text-[11px] font-semibold" fill="#d4e4fa" text-anchor="start" x="435" y="330">3. Death Phase Impact</text>
+<!-- 4. Bottom: Chase Acceleration (RRR > 11.5) -->
+<text class="text-[11px] font-semibold" fill="#d4e4fa" text-anchor="middle" x="250" y="440">4. Chase Accel (RRR &gt; 11.5)</text>
+<!-- 5. Bottom-Left: Collapse Recovery -->
+<text class="text-[11px] font-semibold" fill="#d4e4fa" text-anchor="end" x="65" y="330">5. Collapse Recovery</text>
+<!-- 6. Top-Left: SSSI Reliability -->
+<text class="text-[11px] font-semibold" fill="#d4e4fa" text-anchor="end" x="65" y="115">6. SSSI Reliability</text>
+<!-- POLYGON B (Suryakumar Yadav - Gold Dashed Fill) -->
+<!-- HP SR: 96, HP Avg: 84, Death Impact: 98, Chase Accel: 95, Collapse: 78, SSSI: 99 -->
+<polygon fill="#fabc4d" fill-opacity="0.12" points="250,30 405,135 415,315 250,405 110,295 80,122" stroke="#fabc4d" stroke-dasharray="4,3" stroke-width="2"></polygon>
+<!-- POLYGON A (Ashutosh Sharma - Royal Pink Glowing Solid) -->
+<!-- HP SR: 88, HP Avg: 94, Death Impact: 89, Chase Accel: 91, Collapse: 96, SSSI: 99 -->
+<polygon fill="#ff4994" fill-opacity="0.30" points="250,45 418,126 395,305 250,395 84,316 80,122" stroke="#ff4994" stroke-width="2.5"></polygon>
+<!-- Data Point Markers for Ashutosh -->
+<circle cx="250" cy="45" fill="#ffffff" r="4" stroke="#ff4994" stroke-width="2"></circle>
+<circle cx="418" cy="126" fill="#ffffff" r="4" stroke="#ff4994" stroke-width="2"></circle>
+<circle cx="395" cy="305" fill="#ffffff" r="4" stroke="#ff4994" stroke-width="2"></circle>
+<circle cx="250" cy="395" fill="#ffffff" r="4" stroke="#ff4994" stroke-width="2"></circle>
+<circle cx="84" cy="316" fill="#ffffff" r="4" stroke="#ff4994" stroke-width="2"></circle>
+<circle cx="80" cy="122" fill="#ffffff" r="4" stroke="#ff4994" stroke-width="2"></circle>
+<!-- Data Point Markers for Surya -->
+<circle cx="250" cy="30" fill="#fabc4d" r="3.5"></circle>
+<circle cx="405" cy="135" fill="#fabc4d" r="3.5"></circle>
+<circle cx="415" cy="315" fill="#fabc4d" r="3.5"></circle>
+<circle cx="250" cy="405" fill="#fabc4d" r="3.5"></circle>
+<circle cx="110" cy="295" fill="#fabc4d" r="3.5"></circle>
+<circle cx="80" cy="122" fill="#fabc4d" r="3.5"></circle>
+</svg>
+</div>
+<!-- Radar Bottom Meta Strip -->
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant/20 text-label-xs font-label-xs text-on-surface-variant">
+<span>Stochastic Engine: 6-Dimensional Normalized Covariance Matrix</span>
+<span class="text-tertiary">Calculated against 1,420 IPL Match Sessions</span>
+</div>
+</div>
+<!-- Tactical Analytical Callouts (5 cols) -->
+<div class="xl:col-span-5 flex flex-col justify-between gap-4">
+<!-- Callout 1: Collapse Insulation Edge -->
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-lg p-4 relative overflow-hidden">
+<div class="flex items-start justify-between gap-3">
+<div class="p-2 rounded bg-primary-container/20 text-primary border border-primary/30 flex-shrink-0">
+<span class="material-symbols-outlined">shield</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md font-bold text-on-surface">Ashutosh Over-Index: +16% Collapse Insulation</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                When team is 3 wickets down inside the Powerplay, Ashutosh registers an average of <span class="text-primary font-semibold">34.60 runs</span> vs Surya's <span class="text-secondary font-semibold">30.40 runs</span>. His upright stance and high backlift provide superior protection against incoming deliveries on spicy wickets.
+              </p>
+<div class="mt-2.5 flex items-center gap-2 text-label-xs font-label-xs text-tertiary">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>Wicket-loss probability reduced by 14.8% during transition overs (11-15)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Callout 2: Surya Terminal-Velocity Death Phase -->
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-lg p-4 relative overflow-hidden">
+<div class="flex items-start justify-between gap-3">
+<div class="p-2 rounded bg-secondary/20 text-secondary border border-secondary/30 flex-shrink-0">
+<span class="material-symbols-outlined">speed</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md font-bold text-on-surface">Surya Over-Index: +24.3 SR Death Phase</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                Surya retains unmatched peak terminal strike rate in overs 18-20 (<span class="text-secondary font-semibold">217.17</span> vs Ashutosh's <span class="text-primary font-semibold">192.83</span>). His ability to hit fine behind the wicket forces opposition captains to vacate midwicket sweepers.
+              </p>
+<div class="mt-2.5 flex items-center gap-2 text-label-xs font-label-xs text-secondary">
+<span class="material-symbols-outlined text-sm">bar_chart</span>
+<span>Surya 360° wagon wheel accounts for 42.1% boundaries behind the wicket</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Callout 3: Financial Cap Arbitrage Verdict -->
+<div class="bg-surface-container-low border-2 border-primary-container/40 rounded-lg p-4 relative overflow-hidden">
+<div class="flex items-start justify-between gap-3">
+<div class="p-2 rounded bg-tertiary/20 text-tertiary border border-tertiary/30 flex-shrink-0">
+<span class="material-symbols-outlined">savings</span>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md font-bold text-on-surface">Front-Office Valuation Surplus</span>
+<span class="px-2 py-0.5 bg-primary-container text-white rounded text-label-xs font-label-xs font-bold">Apex Arbitrage</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                Ashutosh yields <span class="text-primary font-bold">88.4% of Surya's high-pressure scoring output</span> while capturing only <span class="text-tertiary font-bold">44.5% of market cap commitment</span> (₹8.5 Cr projected vs ₹18.0 Cr+ Retained benchmark).
+              </p>
+<div class="mt-2 text-label-xs font-label-xs text-on-surface-variant flex items-center justify-between">
+<span>Cap Freedom: <strong class="text-secondary font-bold">+₹9.50 - 10.50 Cr</strong></span>
+<span class="text-tertiary">Earmarked for Overseas Express Pacer</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- DIRECT HEAD-TO-HEAD STATISTICAL DELTA MATRIX TABLE -->
+<section class="bg-surface-container-low border border-outline-variant/30 rounded-lg p-5">
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/20 mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Head-to-Head Empirical Statistical Matrix</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Granular delta breakdown across leverage phases, boundary frequency, and clutch situations.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-label-xs font-label-xs text-on-surface-variant">Sorting:</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface text-label-xs font-label-xs border border-outline-variant/30 font-semibold">War Room Impact Delta</span>
+</div>
+</div>
+<div class="overflow-x-auto custom-scrollbar">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant/30 text-label-xs font-label-xs uppercase tracking-wider text-outline bg-surface-container-lowest/50">
+<th class="py-2.5 px-4 font-semibold">Metric Dimension</th>
+<th class="py-2.5 px-4 font-semibold text-primary">Ashutosh Sharma</th>
+<th class="py-2.5 px-4 font-semibold text-center">Delta / War Room Advantage</th>
+<th class="py-2.5 px-4 font-semibold text-secondary text-right">Suryakumar Yadav</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20 font-body-sm text-body-sm">
+<!-- Row 1: Overall Pressure Index -->
+<tr class="hover:bg-primary-container/[0.04] transition-colors border-l-2 border-primary">
+<td class="py-2.5 px-4 font-medium text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">speed</span>
+<span>Overall Pressure Index (BPRI)</span>
+</td>
+<td class="py-2.5 px-4 font-bold text-primary font-metric-sm text-metric-sm">78.22</td>
+<td class="py-2.5 px-4 text-center">
+<span class="px-2.5 py-0.5 rounded-full text-label-xs font-label-xs font-bold bg-primary-container/20 text-primary border border-primary/30">
+                  +1.32 Ashutosh Advantage
+                </span>
+</td>
+<td class="py-2.5 px-4 font-bold text-secondary text-right font-metric-sm text-metric-sm">76.90</td>
+</tr>
+<!-- Row 2: High-Pressure Strike Rate -->
+<tr class="hover:bg-primary-container/[0.04] transition-colors">
+<td class="py-2.5 px-4 font-medium text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-sm">flash_on</span>
+<span>High-Pressure Strike Rate (HP SR)</span>
+</td>
+<td class="py-2.5 px-4 font-semibold text-on-surface">168.62</td>
+<td class="py-2.5 px-4 text-center">
+<span class="px-2.5 py-0.5 rounded-full text-label-xs font-label-xs font-bold bg-secondary/20 text-secondary border border-secondary/30">
+                  -14.07 Surya Advantage
+                </span>
+</td>
+<td class="py-2.5 px-4 font-semibold text-secondary text-right">182.69</td>
+</tr>
+<!-- Row 3: Death Overs SR (17-20) -->
+<tr class="hover:bg-primary-container/[0.04] transition-colors">
+<td class="py-2.5 px-4 font-medium text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-sm">timer</span>
+<span>Death Overs SR (17-20 Overs Window)</span>
+</td>
+<td class="py-2.5 px-4 font-semibold text-on-surface">192.83</td>
+<td class="py-2.5 px-4 text-center">
+<span class="px-2.5 py-0.5 rounded-full text-label-xs font-label-xs font-bold bg-secondary/20 text-secondary border border-secondary/30">
+                  -24.34 Surya Terminal Accel
+                </span>
+</td>
+<td class="py-2.5 px-4 font-semibold text-secondary text-right">217.17</td>
+</tr>
+<!-- Row 4: Pressure Batting Average -->
+<tr class="hover:bg-primary-container/[0.04] transition-colors border-l-2 border-primary">
+<td class="py-2.5 px-4 font-medium text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">stacked_line_chart</span>
+<span>Pressure Batting Average</span>
+</td>
+<td class="py-2.5 px-4 font-bold text-primary">34.60 Runs</td>
+<td class="py-2.5 px-4 text-center">
+<span class="px-2.5 py-0.5 rounded-full text-label-xs font-label-xs font-bold bg-primary-container/20 text-primary border border-primary/30">
+                  +4.20 Runs Ashutosh Advantage
+                </span>
+</td>
+<td class="py-2.5 px-4 font-semibold text-on-surface-variant text-right">30.40 Runs</td>
+</tr>
+<!-- Row 5: Dot Ball Resistance % -->
+<tr class="hover:bg-primary-container/[0.04] transition-colors">
+<td class="py-2.5 px-4 font-medium text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-sm">block</span>
+<span>Dot Ball Resistance %</span>
+</td>
+<td class="py-2.5 px-4 font-semibold text-on-surface">28.4%</td>
+<td class="py-2.5 px-4 text-center">
+<span class="px-2.5 py-0.5 rounded-full text-label-xs font-label-xs font-bold bg-secondary/20 text-secondary border border-secondary/30">
+                  +4.3% Surya Rotation Advantage
+                </span>
+</td>
+<td class="py-2.5 px-4 font-semibold text-secondary text-right">24.1%</td>
+</tr>
+<!-- Row 6: Boundary % (RRR > 11.0) -->
+<tr class="hover:bg-primary-container/[0.04] transition-colors">
+<td class="py-2.5 px-4 font-medium text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-sm">sports_score</span>
+<span>Boundary % (Req. Run Rate &gt; 11.0)</span>
+</td>
+<td class="py-2.5 px-4 font-semibold text-on-surface">22.8%</td>
+<td class="py-2.5 px-4 text-center">
+<span class="px-2.5 py-0.5 rounded-full text-label-xs font-label-xs font-bold bg-secondary/20 text-secondary border border-secondary/30">
+                  +3.6% Surya Power Edge
+                </span>
+</td>
+<td class="py-2.5 px-4 font-semibold text-secondary text-right">26.4%</td>
+</tr>
+<!-- Row 7: Balls / Dismissal in Death -->
+<tr class="hover:bg-primary-container/[0.04] transition-colors border-l-2 border-primary">
+<td class="py-2.5 px-4 font-medium text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">hourglass_bottom</span>
+<span>Balls / Dismissal in Death (17-20)</span>
+</td>
+<td class="py-2.5 px-4 font-bold text-primary">18.2 Balls</td>
+<td class="py-2.5 px-4 text-center">
+<span class="px-2.5 py-0.5 rounded-full text-label-xs font-label-xs font-bold bg-primary-container/20 text-primary border border-primary/30">
+                  +4.2 Balls Stability Ashutosh Advantage
+                </span>
+</td>
+<td class="py-2.5 px-4 font-semibold text-on-surface-variant text-right">14.0 Balls</td>
+</tr>
+<!-- Row 8: Projected Auction Valuation -->
+<tr class="hover:bg-primary-container/[0.04] transition-colors bg-surface-container-high/30">
+<td class="py-2.5 px-4 font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm">payments</span>
+<span>Projected Franchise Valuation</span>
+</td>
+<td class="py-2.5 px-4 font-bold text-tertiary">₹7.50 - 9.00 Cr</td>
+<td class="py-2.5 px-4 text-center">
+<span class="px-2.5 py-0.5 rounded-full text-label-xs font-label-xs font-bold bg-tertiary/20 text-tertiary border border-tertiary/30">
+                  ₹10.50 Cr Purse Surplus
+                </span>
+</td>
+<td class="py-2.5 px-4 font-bold text-secondary text-right">₹18.00 Cr+ Retained</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- VENUE SUITABILITY & TACTICAL SCOUTING DIRECTIVE -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-5 items-stretch">
+<!-- Sawai Mansingh Stadium (Jaipur) Suitability Card (6 cols) -->
+<div class="xl:col-span-6 bg-surface-container-low border border-outline-variant/30 rounded-lg p-5 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded bg-tertiary/10 text-tertiary border border-tertiary/20">
+<span class="material-symbols-outlined">stadium</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Sawai Mansingh Stadium Suitability</h3>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Jaipur Pitch Profile &amp; Boundary Geometrics</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-metric-display text-metric-display font-bold text-tertiary">94.2%</span>
+<span class="font-label-xs text-label-xs text-secondary block font-semibold">Match Index</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3 my-4">
+<div class="bg-surface-container p-3 rounded border border-outline-variant/30">
+<span class="font-label-xs text-label-xs text-outline uppercase block">Square Boundary</span>
+<span class="font-metric-sm text-metric-sm font-bold text-on-surface">72m — 75m</span>
+<span class="font-label-xs text-label-xs text-secondary block mt-0.5">Penalizes Ramp / Fine Scoop</span>
+</div>
+<div class="bg-surface-container p-3 rounded border border-outline-variant/30">
+<span class="font-label-xs text-label-xs text-outline uppercase block">Straight Boundary</span>
+<span class="font-metric-sm text-metric-sm font-bold text-on-surface">68m</span>
+<span class="font-label-xs text-label-xs text-primary block mt-0.5">Favors Down-the-Ground V Arc</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface">Biomechanical Trajectory Fit:</strong> SMS Jaipur's large square boundaries (75m deep) diminish the efficiency of cross-batted ramps and scoops—Surya's prime weapon. In contrast, Ashutosh operates with a vertical down-the-ground arc (Long-on to Deep Midwicket V-zone) countering heavy back-of-length cutters on holding Jaipur surfaces.
+          </p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between text-label-xs font-label-xs">
+<span class="text-on-surface-variant">Jaipur Death Phase Run-Rate Par: <strong class="text-on-surface">10.22</strong></span>
+<span class="text-primary font-bold">Ashutosh Projected Phase Output: 11.84</span>
+</div>
+</div>
+<!-- Roster Composition Fit & Strategic Command Directives (6 cols) -->
+<div class="xl:col-span-6 bg-surface-container-low border border-outline-variant/30 rounded-lg p-5 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded bg-primary-container/10 text-primary border border-primary/20">
+<span class="material-symbols-outlined">group_work</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Franchise Roster Composition Fit</h3>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Tactical Deployment Matrix</span>
+</div>
+</div>
+<span class="px-2 py-0.5 bg-surface-container-high text-primary border border-primary/30 rounded text-label-xs font-label-xs font-bold uppercase">
+              Slot #6 / #7 Lock
+            </span>
+</div>
+<!-- Roster Flow Strip -->
+<div class="my-4 bg-surface-container p-3 rounded border border-outline-variant/30 flex items-center justify-between text-label-xs font-label-xs">
+<div class="text-center">
+<span class="text-outline block">#4 Anchor</span>
+<span class="text-on-surface font-semibold">Sanju Samson</span>
+</div>
+<span class="text-outline">→</span>
+<div class="text-center">
+<span class="text-outline block">#5 Accelerate</span>
+<span class="text-secondary font-semibold">Riyan Parag</span>
+</div>
+<span class="text-outline">→</span>
+<div class="text-center px-2 py-1 bg-primary-container/20 rounded border border-primary/30">
+<span class="text-primary font-bold block">#6 Clutch Finisher</span>
+<span class="text-white font-bold">ASHUTOSH SHARMA</span>
+</div>
+<span class="text-outline">→</span>
+<div class="text-center">
+<span class="text-outline block">#7 Death Blast</span>
+<span class="text-on-surface font-semibold">Shimron Hetmyer (OS)</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface">Purse Preservation &amp; Squad Architecture:</strong> Drafting Ashutosh preserves one Overseas roster spot and protects ₹38.40 Cr purse liquidity, allowing the war room to aggressively pursue marquee overseas speedsters without compromising batting depth.
+          </p>
+</div>
+<!-- War Room Execution Action Cluster -->
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex flex-wrap items-center justify-end gap-3">
+<button class="px-3 py-2 bg-surface-container hover:bg-surface-container-high border border-outline-variant/40 text-on-surface rounded text-label-xs font-label-xs flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+<span>Download Biomechanical Dossier</span>
+</button>
+<button class="px-3.5 py-2 bg-surface-container-highest hover:bg-surface-variant text-secondary border border-secondary/40 rounded text-label-xs font-label-xs font-semibold flex items-center gap-1.5 transition-transform active:scale-[0.98]">
+<span class="material-symbols-outlined text-sm">model_training</span>
+<span>Simulate War (Cap: ₹9.20 Cr)</span>
+</button>
+<button class="px-4 py-2 bg-primary-container hover:bg-primary-container/90 text-white rounded text-label-xs font-label-xs font-bold flex items-center gap-2 glow-pink transition-transform active:scale-[0.98]">
+<span class="material-symbols-outlined text-sm">bookmark_add</span>
+<span>Add Ashutosh Sharma to Shortlist (Tier 1 Priority)</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+</body></html>

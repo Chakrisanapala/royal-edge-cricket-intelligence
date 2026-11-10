@@ -1,0 +1,386 @@
+{
+  "projectId": "8745219091983978821",
+  "sessionId": "6830578766300703198",
+  "outputComponents": [
+    {
+      "design": {
+        "screens": [
+          {
+            "screenshot": {
+              "name": "projects/8745219091983978821/files/2feae85dbcf0423ba2e07b70c71e0ca3",
+              "downloadUrl": "https://stitch.googleapis.com/v1/projects/8745219091983978821/files/2feae85dbcf0423ba2e07b70c71e0ca3:download"
+            },
+            "htmlCode": {
+              "name": "projects/8745219091983978821/files/1aa45ced08aa4d5aa641c037e0f82db2",
+              "downloadUrl": "https://stitch.googleapis.com/v1/projects/8745219091983978821/files/1aa45ced08aa4d5aa641c037e0f82db2:download",
+              "mimeType": "text/html"
+            },
+            "id": "5fc9f618a98e4179b2a249228050806a",
+            "generatedBy": "figaro_agent",
+            "width": "2972",
+            "height": "4704",
+            "title": "Auction War Room - Franchise Strategy Console",
+            "prompt": "Desktop 1440px enterprise sports franchise analytics console titled 'Auction War Room - Franchise Strategy Console'.\nBrand: ROYAL EDGE | Rajasthan Royals IPL 2027 Auction Intelligence.\nTheme: Midnight Navy (#051424), Royal Pink (#EB107E), Gold (#FABC4D), Cyan (#7BD0FF), dark cards (#0D1C2D, #122131, #1C2B3C).\n\nLayout & Navigation:\n- Persistent 260px Left Sidebar matching the suite with RR crest emblem, navigation items with 'Auction War Room' ACTIVE (highlighted in Royal Pink #EB107E, bg-surface-container-highest/60, border-l-2 border-primary), system diagnostics (Hawk-Eye v4.2 99.98% Sync), and analyst profile (Vikram Rathour - Chief Strategy & Scouting).\n- Top Command Bar: Breadcrumbs 'War Room > Auction Console', search '\u2318K', live pulse pill 'WAR ROOM PULSE: ACTIVE', Quick Live Purse Controls:\n  * Purse Left: \u20b942.80 Cr of \u20b9120.00 Cr Total Budget (with progress visual)\n  * Overseas Slots: 3 Free / 8 Maximum Allowed\n  * Squad Capacity: 18 Filled / 25 Maximum\n  * Trailing action buttons: 'Live Bid Room' in hot pink, Emergency Pause toggle, and Quick PDF Export.\n\nContent Sections:\n1. Executive Policy & Architecture Separation Banner:\n   - Explicit alert banner distinguishing 'Actionable Auction Shortlist (BCCI-Eligible)' from 'Statistical Benchmarks' (e.g. Nawaz, Abrar, Imad Wasim, Sufiyan Muqeem strictly for non-parametric Bayesian prior calculations, zero bidding eligibility).\n   - Filter switchers: [Actionable IPL 2027 Targets (4 Active)] vs [All Benchmark T20 Prospects (10)] vs [Overseas Watchlist].\n\n2. Actionable Target Shortlist by Role (BCCI-Eligible Auction Targets) - 4 High-Priority Target Cards:\n   - Target 1: Death Finisher - Ashutosh Sharma (DC Pool, Age 26, RHB)\n     * BPRI Score: 78.22 (Rank #1 Lower Death) | HP SR: 168.62 | Death SR: 192.83\n     * 95% Bootstrap CI: [148.67 - 189.74] | SSSI: 99.0% Saturated\n     * Base Price: \u20b90.50 Cr | Suggested Bidding Ceiling: \u20b98.50 Cr (Simulated Model Valuation) | Priority: Tier A Apex Target\n     * Tactical Fit: Sawai Mansingh Stadium 94.2% match, vertical down-the-ground bat path.\n   - Target 2: Middle-Order Aggressor - Shashank Singh (PBKS Pool, Age 33, RHB)\n     * BPRI Score: 77.73 | HP SR: 170.53 | Death SR: 195.42\n     * 95% Bootstrap CI: [153.65 - 186.79] | SSSI: 99.0% Saturated\n     * Base Price: \u20b90.75 Cr | Suggested Bidding Ceiling: \u20b97.00 Cr (Simulated Model Valuation) | Priority: Tier A Co-Finisher\n     * Tactical Fit: Spin aggressor in middle overs, pace-hitting boundary surge.\n   - Target 3: Powerplay & Middle Spin Specialist - Matthew Humphreys (Ireland / Northern Knights, Age 24, SLA)\n     * Overseas Slot 6 Lock | BOWPRI: 76.68 | HP Econ: 6.80 | Death Econ: 4.97\n     * 95% Bootstrap CI: [5.05 - 8.69] | SSSI: 41.5% Moderate Sample\n     * Base Price: \u20b90.50 Cr | Suggested Bidding Ceiling: \u20b94.20 Cr (Simulated Model Valuation) | Priority: Tier A Value Arbitrage\n     * Tactical Fit: Arm-ball skid on Jaipur red-soil pitches, elite death dot % (54.2%).\n   - Target 4: Death Over Pace Enforcer - Corbin Bosch (MI / SA, Age 30, RFM)\n     * Overseas Slot 7 Lock | BOWPRI: 74.56 | HP Econ: 7.14 | Death Econ: 8.10\n     * 95% Bootstrap CI: [5.43 - 8.98] | SSSI: 63.0% Sub-Sat\n     * Base Price: \u20b90.75 Cr | Suggested Bidding Ceiling: \u20b93.80 Cr (Simulated Model Valuation) | Priority: Overseas Pace Reserve\n     * Tactical Fit: Heavy ball enforcer, backup for frontline overseas strike bowlers.\n\n3. Interactive Dynamic Purse Allocator & Roster Simulator Panel:\n   - Dynamic simulation controls with interactive slider bars for:\n     * Ashutosh Sharma Bid Slider: \u20b90.50 Cr to \u20b912.00 Cr (Current simulated: \u20b98.50 Cr)\n     * Shashank Singh Bid Slider: \u20b90.75 Cr to \u20b910.00 Cr (Current simulated: \u20b97.00 Cr)\n     * Matthew Humphreys Bid Slider: \u20b90.50 Cr to \u20b96.00 Cr (Current simulated: \u20b94.20 Cr)\n     * Corbin Bosch Bid Slider: \u20b90.75 Cr to \u20b96.00 Cr (Current simulated: \u20b93.80 Cr)\n   - Real-time Calculated Outputs:\n     * Projected Total Spend: \u20b923.50 Cr\n     * Dynamic Surplus Purse Remaining: \u20b919.30 Cr (Preserved for accelerated round & backup uncapped domestic talent)\n     * Squad Slots Remaining: 3 slots free (1 Overseas, 2 Domestic)\n     * War Room Stress Safety Index: 92.4% (Low Risk, High Flexibility)\n     * Warning indicator if any slider exceeds suggested ceiling.\n\n4. Live Bidding War Playbook & Contingency Matrix:\n   - Scenario A: \"Bidding War Escalation on Ashutosh Sharma beyond \u20b98.50 Cr\" -> Pivot to Naman Dhir (BPRI 72.91, Target Cap: \u20b94.0 Cr).\n   - Scenario B: \"Humphreys price spikes above \u20b94.50 Cr\" -> Pivot to George Linde (BOWPRI 76.10, Target Cap: \u20b93.2 Cr).\n   - Quick action buttons: 'Lock Scenario Alpha to Bid Ledger', 'Simulate Live Auction Paddle', 'Export War Room Dossier'.",
+            "name": "projects/8745219091983978821/screens/5fc9f618a98e4179b2a249228050806a",
+            "theme": {
+              "colorMode": "DARK",
+              "font": "INTER",
+              "roundness": "ROUND_FOUR",
+              "customColor": "#eb107e",
+              "headlineFont": "INTER",
+              "bodyFont": "INTER",
+              "labelFont": "INTER",
+              "namedColors": {
+                "surface": "#051424",
+                "secondary_fixed": "#ffdead",
+                "primary_fixed_dim": "#ffb1c7",
+                "on_tertiary_container": "#002d40",
+                "tertiary": "#7bd0ff",
+                "on_tertiary_fixed_variant": "#004c69",
+                "on_background": "#d4e4fa",
+                "on_error_container": "#ffdad6",
+                "surface_container": "#122131",
+                "inverse_primary": "#ba0061",
+                "inverse_on_surface": "#233143",
+                "on_primary_container": "#59002b",
+                "error_container": "#93000a",
+                "on_primary_fixed_variant": "#8e0049",
+                "secondary_container": "#bd8718",
+                "surface_bright": "#2c3a4c",
+                "on_surface_variant": "#e3bdc6",
+                "surface_container_high": "#1c2b3c",
+                "surface_container_low": "#0d1c2d",
+                "on_secondary_fixed_variant": "#604100",
+                "primary_container": "#ff4994",
+                "on_primary": "#650032",
+                "on_secondary_fixed": "#281900",
+                "on_tertiary": "#00354a",
+                "on_secondary_container": "#3a2600",
+                "secondary_fixed_dim": "#fabc4d",
+                "primary": "#ffb1c7",
+                "surface_container_lowest": "#010f1f",
+                "on_surface": "#d4e4fa",
+                "surface_variant": "#273647",
+                "tertiary_container": "#009bd1",
+                "error": "#ffb4ab",
+                "tertiary_fixed_dim": "#7bd0ff",
+                "background": "#051424",
+                "outline_variant": "#5b3f47",
+                "on_tertiary_fixed": "#001e2c",
+                "surface_tint": "#ffb1c7",
+                "secondary": "#fabc4d",
+                "surface_container_highest": "#273647",
+                "surface_dim": "#051424",
+                "primary_fixed": "#ffd9e2",
+                "tertiary_fixed": "#c4e7ff",
+                "on_secondary": "#432c00",
+                "inverse_surface": "#d4e4fa",
+                "outline": "#aa8890",
+                "on_error": "#690005",
+                "on_primary_fixed": "#3e001d"
+              },
+              "colorVariant": "FIDELITY",
+              "overridePrimaryColor": "#eb107e",
+              "overrideSecondaryColor": "#e5a93c",
+              "overrideTertiaryColor": "#38bdf8",
+              "overrideNeutralColor": "#94a3b8",
+              "spacingScale": 2,
+              "typography": {
+                "title-md": {
+                  "fontFamily": "Inter",
+                  "fontSize": "16px",
+                  "fontWeight": "600",
+                  "lineHeight": "24px",
+                  "letterSpacing": "0em"
+                },
+                "headline-lg": {
+                  "fontFamily": "Inter",
+                  "fontSize": "30px",
+                  "fontWeight": "600",
+                  "lineHeight": "38px",
+                  "letterSpacing": "-0.015em"
+                },
+                "body-lg": {
+                  "fontFamily": "Inter",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "24px",
+                  "letterSpacing": "0em"
+                },
+                "body-sm": {
+                  "fontFamily": "Inter",
+                  "fontSize": "12px",
+                  "fontWeight": "400",
+                  "lineHeight": "16px",
+                  "letterSpacing": "0.01em"
+                },
+                "label-md": {
+                  "fontFamily": "Inter",
+                  "fontSize": "12px",
+                  "fontWeight": "500",
+                  "lineHeight": "16px",
+                  "letterSpacing": "0.02em"
+                },
+                "metric-display": {
+                  "fontFamily": "Inter",
+                  "fontSize": "28px",
+                  "fontWeight": "700",
+                  "lineHeight": "32px",
+                  "letterSpacing": "-0.02em"
+                },
+                "display-lg": {
+                  "fontFamily": "Inter",
+                  "fontSize": "40px",
+                  "fontWeight": "700",
+                  "lineHeight": "48px",
+                  "letterSpacing": "-0.02em"
+                },
+                "label-xs": {
+                  "fontFamily": "Inter",
+                  "fontSize": "10px",
+                  "fontWeight": "600",
+                  "lineHeight": "14px",
+                  "letterSpacing": "0.05em"
+                },
+                "body-md": {
+                  "fontFamily": "Inter",
+                  "fontSize": "14px",
+                  "fontWeight": "400",
+                  "lineHeight": "20px",
+                  "letterSpacing": "0em"
+                },
+                "headline-sm": {
+                  "fontFamily": "Inter",
+                  "fontSize": "20px",
+                  "fontWeight": "600",
+                  "lineHeight": "28px",
+                  "letterSpacing": "-0.005em"
+                },
+                "headline-md": {
+                  "fontFamily": "Inter",
+                  "fontSize": "24px",
+                  "fontWeight": "600",
+                  "lineHeight": "32px",
+                  "letterSpacing": "-0.01em"
+                },
+                "metric-sm": {
+                  "fontFamily": "Inter",
+                  "fontSize": "18px",
+                  "fontWeight": "600",
+                  "lineHeight": "22px",
+                  "letterSpacing": "-0.01em"
+                }
+              },
+              "spacing": {
+                "margin": "1rem",
+                "space-xl": "1.5rem",
+                "gutter-desktop": "1.25rem",
+                "margin-desktop": "2rem",
+                "space-md": "0.75rem",
+                "gutter": "1rem",
+                "space-sm": "0.5rem",
+                "space-lg": "1rem",
+                "space-xs": "0.25rem"
+              },
+              "headlineFontFamily": "Inter",
+              "bodyFontFamily": "Inter",
+              "labelFontFamily": "Inter"
+            },
+            "deviceType": "DESKTOP",
+            "screenType": "DESIGN",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "designSystem": {
+              "name": "assets/7748abd5fbf04608b6aa5adad0fda753",
+              "designSystem": {
+                "displayName": "Royal Edge Intelligence",
+                "styleGuidelines": "### \ud83c\udfa8 Visual Identity: Safe\n- **Palette & Typography:** A dependable, precision-engineered dark command center interface utilizing classic utilitarian typography for razor-sharp analytical clarity.\n\n## Brand & Style\n\nThis design system establishes an elite, high-stakes sports analytics command center engineered for IPL auction rooms, strategic war rooms, and front-office scouting divisions. The aesthetic balances utilitarian computational clarity with the assertive prestige of franchise cricket.\n\n### Personality & Tone\n- **Authoritative & Mission-Critical:** Built for zero-latency comprehension under live auction timers. Every metric, percentile, and valuation must feel definitive.\n- **Precision Utilitarian:** Minimal decorative chrome, high tabular density, hairline boundary framing, and clear structural hierarchy.\n- **Electric Prestige:** The deep nocturnal backdrop gives focus to laser-sharp signals in the signature royal magenta and champagne gold accents.\n\n### Design Movement\nThe interface operates under a **Modern Precision Technical** paradigm\u2014merging dark command center ergonomics, hairline borders, dense tabular structures, and micro-elevation shifts to maintain maximum legibility during intense bidding sequences.\n\n## Layout & Spacing\n\nThe layout model is optimized for high information density across multi-display war room consoles, iPads, and mobile monitoring feeds.\n\n### Grid & Structure\n- **Desktop (1200px+):** 12-column dynamic fluid grid with `1.25rem` gutters. Accommodates three distinct working viewports: Left Strategic Queue (3 cols), Center Live Player Board & Analytical Deep Dive (6 cols), and Right Real-Time Auction Ledger & Roster Composition (3 cols).\n- **Tablet / Mobile (360px - 1199px):** Reflows into single-column modular stacks with a consolidated bottom docked operational HUD.\n- **Vertical Spacing:** Compact vertical rhythm utilizing an 8px base rhythm scaled down to 4px (`space-xs`) for tight data table rows and metric badges.\n\n## Elevation & Depth\n\nTo maintain visual clarity without muddying data with heavy shadows, this system relies on **tonal layered surfaces** backed by **hairline micro-borders**.\n\n### Surface Hierarchy\n1. **Canvas (`#070B14`):** Base system depth. Zero elevation.\n2. **Structural Paneling (`#0D1322`):** Primary command center navigation, war room filters, and permanent sideboards. Bound by hairline borders (`#1E2D4A`).\n3. **Data Modules & Cards (`#121A2D`):** Primary actionable cards and player summaries. Separated by `1px solid rgba(30, 45, 74, 0.8)` or accented with `rgba(235, 16, 126, 0.15)` for active targets.\n4. **Interactive Floating & Overlays (`#182238`):** Bidding modulators, confirmation sheets, and popovers. Employs a crisp perimeter stroke (`1px solid #1E2D4A`) alongside an ambient anchor shadow: `0 8px 32px -4px rgba(0, 0, 0, 0.6)`.\n\n## Components\n\n### Buttons\n- **Primary (Bid / Confirm Target):** Background `#EB107E`, text `#FFFFFF`, font weight 600, border radius `0.25rem`. Hover `#FF2A96`. Active scale down `0.98`. Glow effect on live auction bid button: `box-shadow: 0 0 16px rgba(235, 16, 126, 0.4)`.\n- **Secondary (Strategy Alternative / Filter):** Background `rgba(18, 26, 45, 0.8)`, border `1px solid #1E2D4A`, text `#94A3B8`. Hover border `#EB107E`, text `#FFFFFF`.\n- **Marquee / Premium Action:** Background `#E5A93C`, text `#070B14`, font weight 700. Hover `#F3C669`.\n\n### Badges & Chips\n- **Player Role Chips:** Solid pill shape (`9999px`), `label-xs` typography. \n  - Overseas icon/slot: `rgba(56, 189, 248, 0.12)` background, text `#38BDF8`.\n  - Marquee Tier: `rgba(229, 169, 60, 0.12)` background, text `#E5A93C`.\n  - Target Status: `rgba(235, 16, 126, 0.12)` background, text `#EB107E`.\n\n### Cards & Player Modules\n- Surface `#121A2D`, border `1px solid #1E2D4A`, padding `space-lg`.\n- Top header carries player headshot preview, national flag identifier, base price vs current hammer price, and radar metric tags.\n- Stat strips inside cards use surface `#0D1322` with hairline inner dividers.\n\n### Data Tables & Analytics Rows\n- Dense height (36px\u201340px per row).\n- Header row styled with `label-xs`, uppercase, text `#64748B`, bottom border `1px solid #1E2D4A`.\n- Alternating subtle stripe on hover: `rgba(235, 16, 126, 0.04)`.\n- Active bidding row highlights with a continuous `2px` left border in `#EB107E`.\n\n### Inputs & Bidding Increments\n- Dark inset containers (`#070B14`), text `#FFFFFF`, border `1px solid #1E2D4A`.\n- Focus state triggers `1px solid #EB107E` with zero outward blur bleed.\n- Numeric quick-bid increment steppers (`+20L`, `+50L`, `+1Cr`) rendered in bold monospaced layout.\n\n### Telemetry Bars & Gauges\n- Purse burn-down progress bar: Track background `#0D1322`, filled fill with transition gradient `#EB107E` to `#E5A93C`.\n- Over-pressure indices: Segmented micro-bars showing phase efficiency (Death Overs economy vs benchmark) colored dynamically via status tokens (`#10B981`, `#F59E0B`, `#EF4444`).",
+                "theme": {
+                  "colorMode": "DARK",
+                  "font": "INTER",
+                  "roundness": "ROUND_FOUR",
+                  "customColor": "#eb107e",
+                  "headlineFont": "INTER",
+                  "bodyFont": "INTER",
+                  "labelFont": "INTER",
+                  "namedColors": {
+                    "on_secondary_container": "#3a2600",
+                    "inverse_surface": "#d4e4fa",
+                    "surface_container_low": "#0d1c2d",
+                    "primary": "#ffb1c7",
+                    "outline_variant": "#5b3f47",
+                    "surface_container_high": "#1c2b3c",
+                    "primary_container": "#ff4994",
+                    "on_primary": "#650032",
+                    "surface_bright": "#2c3a4c",
+                    "on_primary_fixed_variant": "#8e0049",
+                    "on_error_container": "#ffdad6",
+                    "inverse_on_surface": "#233143",
+                    "on_background": "#d4e4fa",
+                    "surface_container": "#122131",
+                    "on_surface_variant": "#e3bdc6",
+                    "on_secondary_fixed": "#281900",
+                    "tertiary": "#7bd0ff",
+                    "surface": "#051424",
+                    "error": "#ffb4ab",
+                    "primary_fixed_dim": "#ffb1c7",
+                    "surface_variant": "#273647",
+                    "surface_container_highest": "#273647",
+                    "secondary": "#fabc4d",
+                    "on_tertiary": "#00354a",
+                    "on_tertiary_container": "#002d40",
+                    "surface_container_lowest": "#010f1f",
+                    "on_error": "#690005",
+                    "on_secondary_fixed_variant": "#604100",
+                    "primary_fixed": "#ffd9e2",
+                    "on_tertiary_fixed_variant": "#004c69",
+                    "background": "#051424",
+                    "outline": "#aa8890",
+                    "tertiary_container": "#009bd1",
+                    "on_primary_fixed": "#3e001d",
+                    "on_tertiary_fixed": "#001e2c",
+                    "secondary_container": "#bd8718",
+                    "tertiary_fixed_dim": "#7bd0ff",
+                    "on_secondary": "#432c00",
+                    "surface_dim": "#051424",
+                    "inverse_primary": "#ba0061",
+                    "error_container": "#93000a",
+                    "surface_tint": "#ffb1c7",
+                    "on_surface": "#d4e4fa",
+                    "secondary_fixed_dim": "#fabc4d",
+                    "tertiary_fixed": "#c4e7ff",
+                    "secondary_fixed": "#ffdead",
+                    "on_primary_container": "#59002b"
+                  },
+                  "designMd": "---\nname: Royal Edge Intelligence\ncolors:\n  surface: '#051424'\n  surface-dim: '#051424'\n  surface-bright: '#2c3a4c'\n  surface-container-lowest: '#010f1f'\n  surface-container-low: '#0d1c2d'\n  surface-container: '#122131'\n  surface-container-high: '#1c2b3c'\n  surface-container-highest: '#273647'\n  on-surface: '#d4e4fa'\n  on-surface-variant: '#e3bdc6'\n  inverse-surface: '#d4e4fa'\n  inverse-on-surface: '#233143'\n  outline: '#aa8890'\n  outline-variant: '#5b3f47'\n  surface-tint: '#ffb1c7'\n  primary: '#ffb1c7'\n  on-primary: '#650032'\n  primary-container: '#ff4994'\n  on-primary-container: '#59002b'\n  inverse-primary: '#ba0061'\n  secondary: '#fabc4d'\n  on-secondary: '#432c00'\n  secondary-container: '#bd8718'\n  on-secondary-container: '#3a2600'\n  tertiary: '#7bd0ff'\n  on-tertiary: '#00354a'\n  tertiary-container: '#009bd1'\n  on-tertiary-container: '#002d40'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffd9e2'\n  primary-fixed-dim: '#ffb1c7'\n  on-primary-fixed: '#3e001d'\n  on-primary-fixed-variant: '#8e0049'\n  secondary-fixed: '#ffdead'\n  secondary-fixed-dim: '#fabc4d'\n  on-secondary-fixed: '#281900'\n  on-secondary-fixed-variant: '#604100'\n  tertiary-fixed: '#c4e7ff'\n  tertiary-fixed-dim: '#7bd0ff'\n  on-tertiary-fixed: '#001e2c'\n  on-tertiary-fixed-variant: '#004c69'\n  background: '#051424'\n  on-background: '#d4e4fa'\n  surface-variant: '#273647'\ntypography:\n  display-lg:\n    fontFamily: Inter\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 48px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Inter\n    fontSize: 30px\n    fontWeight: '600'\n    lineHeight: 38px\n    letterSpacing: -0.015em\n  headline-md:\n    fontFamily: Inter\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n    letterSpacing: -0.01em\n  headline-sm:\n    fontFamily: Inter\n    fontSize: 20px\n    fontWeight: '600'\n    lineHeight: 28px\n    letterSpacing: -0.005em\n  title-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '600'\n    lineHeight: 24px\n    letterSpacing: 0em\n  body-lg:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0em\n  body-md:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 20px\n    letterSpacing: 0em\n  body-sm:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '400'\n    lineHeight: 16px\n    letterSpacing: 0.01em\n  label-md:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\n    letterSpacing: 0.02em\n  label-xs:\n    fontFamily: Inter\n    fontSize: 10px\n    fontWeight: '600'\n    lineHeight: 14px\n    letterSpacing: 0.05em\n  metric-display:\n    fontFamily: Inter\n    fontSize: 28px\n    fontWeight: '700'\n    lineHeight: 32px\n    letterSpacing: -0.02em\n  metric-sm:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '600'\n    lineHeight: 22px\n    letterSpacing: -0.01em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  gutter: 1rem\n  gutter-desktop: 1.25rem\n  margin: 1rem\n  margin-desktop: 2rem\n  space-xs: 0.25rem\n  space-sm: 0.5rem\n  space-md: 0.75rem\n  space-lg: 1rem\n  space-xl: 1.5rem\n---\n\n## Brand & Style\n\nThis design system establishes an elite, high-stakes sports analytics command center engineered for IPL auction rooms, strategic war rooms, and front-office scouting divisions. The aesthetic balances utilitarian computational clarity with the assertive prestige of franchise cricket.\n\n### Personality & Tone\n- **Authoritative & Mission-Critical:** Built for zero-latency comprehension under live auction timers. Every metric, percentile, and valuation must feel definitive.\n- **Precision Utilitarian:** Minimal decorative chrome, high tabular density, hairline boundary framing, and clear structural hierarchy.\n- **Electric Prestige:** The deep nocturnal backdrop gives focus to laser-sharp signals in the signature royal magenta and champagne gold accents.\n\n### Design Movement\nThe interface operates under a **Modern Precision Technical** paradigm\u2014merging dark command center ergonomics, hairline borders, dense tabular structures, and micro-elevation shifts to maintain maximum legibility during intense bidding sequences.\n\n## Colors\n\nThe palette leverages a dark nocturnal base to minimize optical fatigue in low-light war rooms, punctuated by high-contrast categorical accents.\n\n### Palette Architecture\n- **Primary (`#EB107E`):** Franchise Royal Magenta. Reserved for primary actions, current active bids, critical selection targets, and high-priority alerts. Hover state transitions to `#FF2A96`.\n- **Secondary (`#E5A93C`):** Royal Gold / Champagne. Strictly designated for elite player tier tags (Marquee/Icon status), purse allocation milestones, and cap room ceilings. Secondary hover state scales to `#F3C669`.\n- **Tertiary (`#38BDF8`):** Ice Blue. Applied to pure statistical markers, projected true values, expected run values (xRV), and delivery phase modeling.\n- **Neutral Base (`#070B14`, `#0D1322`, `#121A2D`, `#182238`):** Layered obsidian tones that define deep canvas backgrounds, secondary panels, card surfaces, and control wells.\n- **Neutral Text & Dividers (`#FFFFFF`, `#94A3B8`, `#64748B`, `#1E2D4A`):** High-clarity white for primary stats, slate grey for contextual metrics, and crisp navy borders.\n\n### Telemetry & Cricket Phase Tokens\n- **Peak Performance / Surplus (`#10B981`):** High bowling economy, strike-rate spikes, value-to-cost surplus.\n- **Contested / Pivot (`#F59E0B`):** Middle overs attrition, bidding pressure inflection, secondary targets.\n- **Critical / Risk (`#EF4444`):** Death-overs volatility, purse exhaustion warning, extreme bid inflation.\n\n## Typography\n\nTypography prioritizes rapid analytical consumption. Inter is leveraged across all roles, with specific stylistic features activated for tabular analytics:\n\n- **Tabular Figures (`tnum`):** All numeric displays, auction purse counters, strike rates, dot-ball percentages, and economy rates must enable `font-feature-settings: 'tnum' 1, 'cv05' 1`. This prevents layout shifts when auction numbers fluctuate live.\n- **Metric Tokens:** `metric-display` and `metric-sm` are purpose-built for fast scout scanning across dense multi-column player matrices.\n- **Micro Labels:** `label-xs` uses uppercase styling with `0.05em` letter spacing for phase indicators (POWERPLAY, MIDDLE, DEATH) and tactical designations.\n\n## Layout & Spacing\n\nThe layout model is optimized for high information density across multi-display war room consoles, iPads, and mobile monitoring feeds.\n\n### Grid & Structure\n- **Desktop (1200px+):** 12-column dynamic fluid grid with `1.25rem` gutters. Accommodates three distinct working viewports: Left Strategic Queue (3 cols), Center Live Player Board & Analytical Deep Dive (6 cols), and Right Real-Time Auction Ledger & Roster Composition (3 cols).\n- **Tablet / Mobile (360px - 1199px):** Reflows into single-column modular stacks with a consolidated bottom docked operational HUD.\n- **Vertical Spacing:** Compact vertical rhythm utilizing an 8px base rhythm scaled down to 4px (`space-xs`) for tight data table rows and metric badges.\n\n## Elevation & Depth\n\nTo maintain visual clarity without muddying data with heavy shadows, this system relies on **tonal layered surfaces** backed by **hairline micro-borders**.\n\n### Surface Hierarchy\n1. **Canvas (`#070B14`):** Base system depth. Zero elevation.\n2. **Structural Paneling (`#0D1322`):** Primary command center navigation, war room filters, and permanent sideboards. Bound by hairline borders (`#1E2D4A`).\n3. **Data Modules & Cards (`#121A2D`):** Primary actionable cards and player summaries. Separated by `1px solid rgba(30, 45, 74, 0.8)` or accented with `rgba(235, 16, 126, 0.15)` for active targets.\n4. **Interactive Floating & Overlays (`#182238`):** Bidding modulators, confirmation sheets, and popovers. Employs a crisp perimeter stroke (`1px solid #1E2D4A`) alongside an ambient anchor shadow: `0 8px 32px -4px rgba(0, 0, 0, 0.6)`.\n\n## Shapes\n\nThe design system adopts a **Level 1 (Soft)** shape geometry (`0.25rem` / 4px base radius). This produces sharp, high-tech instrument corners that convey precision engineering, eschewing casual roundness in favor of command console rigor.\n\n- **Standard Elements (Cards, Inputs, Data Cells):** `0.25rem` (4px).\n- **Secondary Containers & Dialogs (`rounded-lg`):** `0.5rem` (8px).\n- **Pill Exceptions:** Micro status badges, metric indicators, and tactical phase tags use fully rounded pill profiles (`9999px`) to create clear shape-contrast against the structural angular cards.\n\n## Components\n\n### Buttons\n- **Primary (Bid / Confirm Target):** Background `#EB107E`, text `#FFFFFF`, font weight 600, border radius `0.25rem`. Hover `#FF2A96`. Active scale down `0.98`. Glow effect on live auction bid button: `box-shadow: 0 0 16px rgba(235, 16, 126, 0.4)`.\n- **Secondary (Strategy Alternative / Filter):** Background `rgba(18, 26, 45, 0.8)`, border `1px solid #1E2D4A`, text `#94A3B8`. Hover border `#EB107E`, text `#FFFFFF`.\n- **Marquee / Premium Action:** Background `#E5A93C`, text `#070B14`, font weight 700. Hover `#F3C669`.\n\n### Badges & Chips\n- **Player Role Chips:** Solid pill shape (`9999px`), `label-xs` typography. \n  - Overseas icon/slot: `rgba(56, 189, 248, 0.12)` background, text `#38BDF8`.\n  - Marquee Tier: `rgba(229, 169, 60, 0.12)` background, text `#E5A93C`.\n  - Target Status: `rgba(235, 16, 126, 0.12)` background, text `#EB107E`.\n\n### Cards & Player Modules\n- Surface `#121A2D`, border `1px solid #1E2D4A`, padding `space-lg`.\n- Top header carries player headshot preview, national flag identifier, base price vs current hammer price, and radar metric tags.\n- Stat strips inside cards use surface `#0D1322` with hairline inner dividers.\n\n### Data Tables & Analytics Rows\n- Dense height (36px\u201340px per row).\n- Header row styled with `label-xs`, uppercase, text `#64748B`, bottom border `1px solid #1E2D4A`.\n- Alternating subtle stripe on hover: `rgba(235, 16, 126, 0.04)`.\n- Active bidding row highlights with a continuous `2px` left border in `#EB107E`.\n\n### Inputs & Bidding Increments\n- Dark inset containers (`#070B14`), text `#FFFFFF`, border `1px solid #1E2D4A`.\n- Focus state triggers `1px solid #EB107E` with zero outward blur bleed.\n- Numeric quick-bid increment steppers (`+20L`, `+50L`, `+1Cr`) rendered in bold monospaced layout.\n\n### Telemetry Bars & Gauges\n- Purse burn-down progress bar: Track background `#0D1322`, filled fill with transition gradient `#EB107E` to `#E5A93C`.\n- Over-pressure indices: Segmented micro-bars showing phase efficiency (Death Overs economy vs benchmark) colored dynamically via status tokens (`#10B981`, `#F59E0B`, `#EF4444`).",
+                  "colorVariant": "FIDELITY",
+                  "overridePrimaryColor": "#eb107e",
+                  "overrideSecondaryColor": "#e5a93c",
+                  "overrideTertiaryColor": "#38bdf8",
+                  "overrideNeutralColor": "#94a3b8",
+                  "spacingScale": 2,
+                  "typography": {
+                    "title-md": {
+                      "fontFamily": "Inter",
+                      "fontSize": "16px",
+                      "fontWeight": "600",
+                      "lineHeight": "24px",
+                      "letterSpacing": "0em"
+                    },
+                    "headline-sm": {
+                      "fontFamily": "Inter",
+                      "fontSize": "20px",
+                      "fontWeight": "600",
+                      "lineHeight": "28px",
+                      "letterSpacing": "-0.005em"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Inter",
+                      "fontSize": "24px",
+                      "fontWeight": "600",
+                      "lineHeight": "32px",
+                      "letterSpacing": "-0.01em"
+                    },
+                    "metric-display": {
+                      "fontFamily": "Inter",
+                      "fontSize": "28px",
+                      "fontWeight": "700",
+                      "lineHeight": "32px",
+                      "letterSpacing": "-0.02em"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Inter",
+                      "fontSize": "40px",
+                      "fontWeight": "700",
+                      "lineHeight": "48px",
+                      "letterSpacing": "-0.02em"
+                    },
+                    "label-md": {
+                      "fontFamily": "Inter",
+                      "fontSize": "12px",
+                      "fontWeight": "500",
+                      "lineHeight": "16px",
+                      "letterSpacing": "0.02em"
+                    },
+                    "body-md": {
+                      "fontFamily": "Inter",
+                      "fontSize": "14px",
+                      "fontWeight": "400",
+                      "lineHeight": "20px",
+                      "letterSpacing": "0em"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Inter",
+                      "fontSize": "30px",
+                      "fontWeight": "600",
+                      "lineHeight": "38px",
+                      "letterSpacing": "-0.015em"
+                    },
+                    "body-sm": {
+                      "fontFamily": "Inter",
+                      "fontSize": "12px",
+                      "fontWeight": "400",
+                      "lineHeight": "16px",
+                      "letterSpacing": "0.01em"
+                    },
+                    "label-xs": {
+                      "fontFamily": "Inter",
+                      "fontSize": "10px",
+                      "fontWeight": "600",
+                      "lineHeight": "14px",
+                      "letterSpacing": "0.05em"
+                    },
+                    "body-lg": {
+                      "fontFamily": "Inter",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "24px",
+                      "letterSpacing": "0em"
+                    },
+                    "metric-sm": {
+                      "fontFamily": "Inter",
+                      "fontSize": "18px",
+                      "fontWeight": "600",
+                      "lineHeight": "22px",
+                      "letterSpacing": "-0.01em"
+                    }
+                  },
+                  "spacing": {
+                    "space-md": "0.75rem",
+                    "margin-desktop": "2rem",
+                    "space-xs": "0.25rem",
+                    "space-sm": "0.5rem",
+                    "space-lg": "1rem",
+                    "gutter": "1rem",
+                    "margin": "1rem",
+                    "gutter-desktop": "1.25rem",
+                    "space-xl": "1.5rem"
+                  },
+                  "headlineFontFamily": "Inter",
+                  "bodyFontFamily": "Inter",
+                  "labelFontFamily": "Inter"
+                }
+              },
+              "version": "1"
+            }
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I have designed and deployed the **Auction War Room (Franchise Strategy Console)** (`Auction War Room - Franchise Strategy Console`) for Rajasthan Royals IPL 2027 Auction Intelligence, built to enterprise desktop specifications (1440px) and following the royal dark mode design system.\n\n### Key Architectural & Strategic Console Highlights:\n\n1. **Persistent Command Layout & War Room Telemetry:**\n   - **260px Left Sidebar:** Branded with the Rajasthan Royals emblem, active indicator on **Auction War Room**, Hawk-Eye v4.2 real-time sync diagnostic (99.98%), and Chief Strategy & Scouting profile.\n   - **Tactical Top Command Bar:** Breadcrumb trail (`War Room > Auction Console`), global tactical search (`\u2318K`), active pulse indicator (`WAR ROOM PULSE: ACTIVE`), and dynamic live purse widgets:\n     - **Purse Rem:** `\u20b942.80 Cr` of `\u20b9120.0 Cr` budget\n     - **Overseas Slots:** `3 Free` of 8 Max\n     - **Squad Capacity:** `18 / 25` filled (7 remaining capacity)\n     - Live execution and emergency pause buttons.\n\n2. **Policy Separation Protocol (BCCI Governance Directive):**\n   - High-visibility policy separation banner clarifying that international benchmark players (such as Mohammad Nawaz, Abrar Ahmed, Imad Wasim, and Sufiyan Muqeem) serve strictly as objective mathematical anchors for non-parametric Bayesian prior distributions and carry zero auction eligibility under BCCI regulations.\n   - Dedicated filter switcher segmenting **Actionable IPL 2027 Targets (4 Active)**, **All Benchmark Prospects (10)**, and **Overseas Watchlist**.\n\n3. **Actionable BCCI-Eligible Target Shortlist Matrix:**\n   - **Tier A Apex Target (Death Finisher): Ashutosh Sharma**\n     - BPRI `78.22` (Rank #1 Lower Death) | HP SR `168.62` | Death SR `192.83` | SSSI `99.0%`\n     - Base Price: `\u20b90.50 Cr` | Suggested Model Ceiling: `\u20b98.50 Cr`\n     - Tactical Fit: Sawai Mansingh Stadium 94.2% suitability, neutralizing Jaipur long boundaries via vertical down-the-ground arc.\n   - **Tier A Co-Finisher (Middle-Order Aggressor): Shashank Singh**\n     - BPRI `77.73` | HP SR `170.53` | Death SR `195.42` | SSSI `99.0%`\n     - Base Price: `\u20b90.75 Cr` | Suggested Model Ceiling: `\u20b97.00 Cr`\n     - Tactical Fit: Spin enforcer against wrist spinners through overs 11\u201316.\n   - **Tier A Value Arbitrage (Overseas Slot 6): Matthew Humphreys**\n     - BOWPRI `76.68` | HP Econ `6.80` | Death Econ `4.97` | SSSI `41.5%`\n     - Base Price: `\u20b90.50 Cr` | Suggested Model Ceiling: `\u20b94.20 Cr`\n     - Tactical Fit: Arm-ball skid on Jaipur pitches with 54.2% death phase dot-ball ratio.\n   - **Overseas Pace Reserve (Overseas Slot 7): Corbin Bosch**\n     - BOWPRI `74.56` | HP Econ `7.14` | Death Econ `8.10` | SSSI `63.0%`\n     - Base Price: `\u20b90.75 Cr` | Suggested Model Ceiling: `\u20b93.80 Cr`\n     - Tactical Fit: Heavy ball enforcer providing frontline overseas rotation.\n\n4. **Dynamic Purse Allocator & Roster Stress Simulator:**\n   - Real-time interactive bidding sliders for each of the 4 priority targets allowing analysts to stress-test purse depletion from base price up to maximum upper thresholds.\n   - **Simulated Output Ledger:**\n     - Projected 4-Target Total Spend: `\u20b923.45 Cr`\n     - Dynamic Surplus Remaining: `\u20b919.35 Cr` (Preserved for accelerated rounds and uncapped domestic backups)\n     - Squad Composition Impact: 3 slots free (1 Overseas buffer, 2 Domestic uncapped)\n     - War Room Stress Safety Index: `92.4% (Low Risk)`\n\n5. **Live Bidding War Playbook & Contingency Matrix:**\n   - **Escalation Trigger Alpha:** If DC or CSK bidder pushes Ashutosh Sharma beyond `\u20b98.50 Cr`, pivot to Naman Dhir (BPRI 72.91 at `\u20b94.00 Cr` ceiling), preserving `+\u20b94.50 Cr` cap surplus.\n   - **Escalation Trigger Beta:** If overseas bidding frenzy spikes Humphreys past `\u20b94.50 Cr`, pivot to George Linde (BOWPRI 76.10 at `\u20b93.20 Cr` ceiling), safeguarding `+\u20b91.30 Cr` reserve.\n   - Action triggers to **Lock Scenario Alpha to Bid Ledger**, **Simulate Live Auction Paddle**, and **Export War Room Dossier**."
+    },
+    {
+      "suggestion": "Generate the 'Player Profile' deep-dive screen for Ashutosh Sharma"
+    },
+    {
+      "suggestion": "Generate the 'Methodology' screen with BPRI/BOWPRI mathematical formulations"
+    },
+    {
+      "suggestion": "Adjust the War Room Purse Allocator to simulate aggressive bidding up to \u20b911 Cr for Ashutosh Sharma"
+    }
+  ]
+}

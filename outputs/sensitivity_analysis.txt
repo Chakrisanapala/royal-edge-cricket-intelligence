@@ -1,0 +1,17 @@
+=== SENSITIVITY ANALYSIS REPORT ===
+
+Batting Spearman Rank Correlations across Alternative Weights:
+                   bpri_score  bpri_config_a_adj  bpri_config_b_adj  bpri_config_c_adj
+bpri_score           1.000000           0.986355           0.977116           0.983316
+bpri_config_a_adj    0.986355           1.000000           0.947965           0.958515
+bpri_config_b_adj    0.977116           0.947965           1.000000           0.992789
+bpri_config_c_adj    0.983316           0.958515           0.992789           1.000000
+
+Bowling Spearman Rank Correlations across Alternative Weights:
+                     bowpri_score  bowpri_config_a_adj  bowpri_config_b_adj  bowpri_config_c_adj
+bowpri_score             1.000000             0.980795             0.988906             0.987149
+bowpri_config_a_adj      0.980795             1.000000             0.961917             0.982506
+bowpri_config_b_adj      0.988906             0.961917             1.000000             0.978087
+bowpri_config_c_adj      0.987149             0.982506             0.978087             1.000000
+
+Conclusion: Spearman rank correlations across all weight variants exceed 0.92 for Batting and 0.89 for Bowling, proving the indices are structurally robust to weight perturbation.

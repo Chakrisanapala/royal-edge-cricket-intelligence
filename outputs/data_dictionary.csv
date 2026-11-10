@@ -1,0 +1,78 @@
+Table,Column,Dtype,Missing_Count,Missing_Pct,Sample_Value
+competitions,comp_id,int64,0,0.0,3395
+competitions,comp_name,str,0,0.0,South Africa in New Zealand T20I Series 2026
+competitions,match_format,str,0,0.0,T20I
+competitions,season,str,0,0.0,2026
+teams,comp_id,int64,0,0.0,1331
+teams,team_id,int64,0,0.0,22
+teams,team_name,str,0,0.0,England
+matches,match_id,int64,0,0.0,13511
+matches,comp_id,int64,0,0.0,1331
+matches,match_number,int64,0,0.0,1
+matches,match_date,str,0,0.0,2022-01-22
+matches,stage,str,0,0.0,League
+matches,venue_id,int64,0,0.0,54
+matches,venue_country,str,0,0.0,West Indies
+matches,home_team_id,int64,0,0.0,28
+matches,home_team,str,0,0.0,West Indies
+matches,away_team_id,int64,0,0.0,22
+matches,away_team,str,0,0.0,England
+matches,home_team_captain_id,float64,44,4.98,494.0
+matches,away_team_captain_id,float64,45,5.1,478.0
+matches,toss_win_team_id,float64,15,1.7,28.0
+matches,toss_opted,str,15,1.7,Fielding
+matches,man_of_the_match,int64,0,0.0,0
+matches,first_inn_revised_overs,float64,858,97.17,114.0
+matches,second_inn_revised_overs,float64,858,97.17,114.0
+matches,revised_target,float64,860,97.4,143.0
+matches,knock_out,int64,0,0.0,0
+matches,win_team_id,float64,41,4.64,28.0
+matches,result,str,0,0.0,West Indies Won by 9 Wickets
+playing_eleven,match_id,int64,0,0.0,13511
+playing_eleven,team_id,int64,0,0.0,22
+playing_eleven,player_id,int64,0,0.0,1187
+playing_eleven,batting_order,float64,8678,30.58,1.0
+playing_eleven,is_played,bool,0,0.0,True
+playing_eleven,is_captain,object,8667,30.54,False
+playing_eleven,is_wk,object,8667,30.54,False
+playing_eleven,is_impact,int64,0,0.0,0
+playing_eleven,is_impact_off,int64,0,0.0,0
+competition_team_player_mapping,comp_id,int64,0,0.0,1331
+competition_team_player_mapping,comp_name,str,0,0.0,England in West Indies T20I Series 2022
+competition_team_player_mapping,team_id,int64,0,0.0,22
+competition_team_player_mapping,team_name,str,0,0.0,England
+competition_team_player_mapping,player_id,int64,0,0.0,478
+competition_team_player_mapping,player_name,str,0,0.0,Eoin Morgan
+ball_by_ball,match_id,int64,0,0.0,13511
+ball_by_ball,innings,int64,0,0.0,1
+ball_by_ball,overid,int64,0,0.0,1
+ball_by_ball,over_ball_num,int64,0,0.0,1
+ball_by_ball,innings_ball_num,int64,0,0.0,1
+ball_by_ball,batting_team_id,int64,0,0.0,22
+ball_by_ball,bowling_team_id,int64,0,0.0,28
+ball_by_ball,striker_id,int64,0,0.0,1187
+ball_by_ball,striker_name,str,0,0.0,Jason Roy
+ball_by_ball,non_striker_id,int64,0,0.0,6273
+ball_by_ball,non_striker_name,str,0,0.0,Tom Banton
+ball_by_ball,bowler_id,int64,0,0.0,1772
+ball_by_ball,bowler_name,str,0,0.0,Sheldon Cottrell
+ball_by_ball,batting_type,str,0,0.0,RHB
+ball_by_ball,bowling_type,str,0,0.0,Left-arm fast-medium
+ball_by_ball,batting_order,int64,0,0.0,1
+ball_by_ball,runs,int64,0,0.0,0
+ball_by_ball,is_four,bool,0,0.0,False
+ball_by_ball,is_six,bool,0,0.0,False
+ball_by_ball,is_wicket,bool,0,0.0,False
+ball_by_ball,dismissal_type_id,float64,190118,94.59,1.0
+ball_by_ball,dismissal_type,str,190118,94.59,Bowled
+ball_by_ball,dismissed_player_id,float64,190107,94.58,1187.0
+ball_by_ball,extras_type,str,189167,94.11,wide
+ball_by_ball,extras1_runs,int64,0,0.0,6
+ball_by_ball,extras_2_runs,int64,0,0.0,0
+ball_by_ball,pace_or_spin,str,0,0.0,Pace
+ball_by_ball,bowl_speed,float64,0,0.0,0.0
+ball_by_ball,stroke,str,6158,3.06,Cover Drive
+ball_by_ball,delivery_style,str,391,0.19,Inswing
+ball_by_ball,over_or_around,str,407,0.2,Over
+ball_by_ball,on_or_off,str,0,0.0,Off-side
+ball_by_ball,delivery_ist_time,str,0,0.0,2022-01-23 00:00:00 UTC

@@ -1,0 +1,21 @@
+rank,id,player_name,nationality,is_indian,ipl_auction_eligibility,hp_deliveries,ipl_hp_balls,ipl_hp_sr,t20i_hp_balls,t20i_hp_sr,sample_dependency,discipline,ipl_hp_overs,ipl_hp_econ,t20i_hp_overs,t20i_hp_econ
+1,8101,Ashutosh Sharma,India,True,Eligible,341,328.0,171.34,13.0,100.0,Predominantly IPL,Batter,,,,
+2,2756,Shashank Singh,Other / Unspecified,False,Eligible,492,492.0,170.53,0.0,N/A,Predominantly IPL,Batter,,,,
+3,1699,Suryakumar Yadav,India,True,Eligible,1005,624.0,176.76,381.0,192.39,Balanced,Batter,,,,
+4,6273,Tom Banton,England,False,Eligible,114,0.0,N/A,114.0,186.84,Predominantly T20I,Batter,,,,
+5,768,Reeza Hendricks,South Africa,False,Eligible,365,0.0,N/A,365.0,169.59,Predominantly T20I,Batter,,,,
+6,37052,Naman Dhir,India,True,Eligible,342,256.0,179.69,86.0,205.81,Predominantly IPL,Batter,,,,
+7,2101,Quinton de Kock,South Africa,False,Eligible,455,223.0,163.68,232.0,176.72,Balanced,Batter,,,,
+8,5553,Phil Salt,England,False,Eligible,292,119.0,163.87,173.0,203.47,Balanced,Batter,,,,
+9,4703,Rishabh Pant,India,True,Eligible,473,373.0,178.55,100.0,169.0,Predominantly IPL,Batter,,,,
+10,6396,Tim David,Australia,False,Eligible,937,563.0,180.82,374.0,182.09,Balanced,Batter,,,,
+1,2490,Mohammad Nawaz,Pakistan,False,Ineligible (BCCI Policy),242,,,,,Purely T20I,Bowler,0.0,N/A,38.8,6.15
+2,5979,Abrar Ahmed,Pakistan,False,Ineligible (BCCI Policy),249,,,,,Purely T20I,Bowler,0.0,N/A,40.8,6.51
+3,22471,Matthew Humphreys,Ireland,False,Eligible,90,,,,,Purely T20I,Bowler,0.0,N/A,13.8,6.8
+4,4229,George Linde,South Africa,False,Eligible,80,,,,,Purely T20I,Bowler,0.0,N/A,13.0,7.38
+5,781,Sunil Narine,Other / Unspecified,False,Eligible,596,,,,,Predominantly IPL,Bowler,97.7,7.27,0.0,N/A
+6,3578,Imad Wasim,Pakistan,False,Ineligible (BCCI Policy),107,,,,,Purely T20I,Bowler,0.0,N/A,17.3,6.0
+7,3629,Corbin Bosch,South Africa,False,Eligible,130,,,,,Balanced,Bowler,9.0,8.44,12.0,6.17
+8,6643,Hasan Mahmud,Bangladesh,False,Eligible,126,,,,,Purely T20I,Bowler,0.0,N/A,20.0,7.5
+9,34485,Sufiyan Muqeem,Pakistan,False,Ineligible (BCCI Policy),150,,,,,Purely T20I,Bowler,0.0,N/A,24.3,4.89
+10,4101,Mitchell Santner,New Zealand,False,Eligible,597,,,,,Predominantly T20I,Bowler,28.0,7.75,67.5,6.99

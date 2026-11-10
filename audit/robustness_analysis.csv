@@ -1,0 +1,8 @@
+Test_Scenario,Batting_Top1,Bowling_Top1,Top10_Overlap_Pct,Spearman_Rank_Correlation
+Baseline BPRI / BOWPRI (Combined),Ashutosh Sharma,Mohammad Nawaz,100%,1.0
+Weight Sensitivity: Baseline-First (40% weight),Ashutosh Sharma,Mohammad Nawaz,100%,0.986
+Weight Sensitivity: Power/Death Focus (25% death),Ashutosh Sharma,Mohammad Nawaz,100%,0.977
+Weight Sensitivity: Finishing/Chase Focus (25% chase),Ashutosh Sharma,Mohammad Nawaz,100%,0.983
+Format Sensitivity: IPL-Only Deliveries,Ashutosh Sharma,Sunil Narine,60% Bat / 40% Bowl,0.742
+Sample Threshold: High Minimum (>=150 balls),Ashutosh Sharma,Sunil Narine,80% Bat / 70% Bowl,0.915
+Sample Threshold: Low Minimum (>=40 balls),Ashutosh Sharma,Mohammad Nawaz,70% Bat / 60% Bowl,0.884

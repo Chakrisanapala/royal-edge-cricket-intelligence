@@ -1,0 +1,7 @@
+Dataset,Rows,Columns,Duplicates,Memory_MB
+competitions,141,4,0,0.01
+teams,353,3,0,0.01
+matches,883,22,0,0.22
+playing_eleven,28381,9,0,3.21
+competition_team_player_mapping,6413,6,0,0.64
+ball_by_ball,200999,33,0,69.49
