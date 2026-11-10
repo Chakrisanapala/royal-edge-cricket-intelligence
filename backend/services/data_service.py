@@ -8,8 +8,24 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 
 class DataService:
     def __init__(self):
-        self.batters_csv = os.path.join(FINAL_DIR, "RR_Top_10_Batters.csv")
-        self.bowlers_csv = os.path.join(FINAL_DIR, "RR_Top_10_Bowlers.csv")
+        # Multi-path candidate resolution ensuring reliability in Render Linux containers
+        candidate_batters = [
+            os.path.join(FINAL_DIR, "RR_Top_10_Batters.csv"),
+            os.path.join(FINAL_DIR, "ROYAL_EDGE_Top_10_Batters.csv"),
+            os.path.join(BASE_DIR, "outputs", "top_10_batters.csv"),
+            os.path.abspath("final_submission/RR_Top_10_Batters.csv"),
+            os.path.abspath("outputs/top_10_batters.csv"),
+        ]
+        self.batters_csv = next((p for p in candidate_batters if os.path.exists(p)), candidate_batters[0])
+
+        candidate_bowlers = [
+            os.path.join(FINAL_DIR, "RR_Top_10_Bowlers.csv"),
+            os.path.join(FINAL_DIR, "ROYAL_EDGE_Top_10_Bowlers.csv"),
+            os.path.join(BASE_DIR, "outputs", "top_10_bowlers.csv"),
+            os.path.abspath("final_submission/RR_Top_10_Bowlers.csv"),
+            os.path.abspath("outputs/top_10_bowlers.csv"),
+        ]
+        self.bowlers_csv = next((p for p in candidate_bowlers if os.path.exists(p)), candidate_bowlers[0])
         self.parquet_file = os.path.join(DATA_DIR, "processed", "ball_by_ball_pressure.parquet")
         
         # Load CSVs

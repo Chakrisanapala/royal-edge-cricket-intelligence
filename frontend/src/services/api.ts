@@ -1,4 +1,42 @@
-const API_BASE = '/api';
+// Support VITE_API_URL for Render backend or fallback to /api (Netlify proxy / local Vite)
+const getApiBase = (): string => {
+  const envUrl = (import.meta.env.VITE_API_URL as string | undefined)?.trim();
+  if (!envUrl) return '/api';
+  const clean = envUrl.replace(/\/$/, '');
+  return clean.endsWith('/api') ? clean : `${clean}/api`;
+};
+
+const API_BASE = getApiBase();
+
+/**
+ * Validates and parses API responses.
+ * Detects if Netlify or an intermediate proxy returned HTML (e.g. index.html SPA fallback)
+ * and produces an explicit, actionable error message rather than JSON parse syntax errors.
+ */
+async function handleResponse<T>(res: Response, errorMsg: string): Promise<T> {
+  const contentType = res.headers.get('content-type') || '';
+  if (!res.ok) {
+    let detail = '';
+    try {
+      if (contentType.includes('application/json')) {
+        const errJson = await res.json();
+        detail = errJson.detail || errJson.message || '';
+      }
+    } catch {
+      // ignore
+    }
+    throw new Error(detail ? `${errorMsg}: ${detail}` : `${errorMsg} (HTTP ${res.status})`);
+  }
+
+  if (!contentType.includes('application/json')) {
+    throw new Error(
+      `Invalid response from API (${res.url}). Expected application/json but received ${contentType || 'HTML'}. ` +
+      `Please ensure your Render backend is deployed and VITE_API_URL is configured in Netlify.`
+    );
+  }
+
+  return res.json();
+}
 
 export interface OverviewData {
   matches_analyzed: number;
@@ -104,8 +142,7 @@ export interface CompareResult {
 export const api = {
   async getOverview(): Promise<OverviewData> {
     const res = await fetch(`${API_BASE}/overview`);
-    if (!res.ok) throw new Error('Failed to load overview data');
-    return res.json();
+    return handleResponse<OverviewData>(res, 'Failed to load overview data');
   },
 
   async getBatters(role?: string, search?: string, sortBy = 'bpri_score', ascending = false): Promise<Batter[]> {
@@ -115,8 +152,7 @@ export const api = {
     params.append('sort_by', sortBy);
     params.append('ascending', String(ascending));
     const res = await fetch(`${API_BASE}/players/batters?${params.toString()}`);
-    if (!res.ok) throw new Error('Failed to load batters');
-    return res.json();
+    return handleResponse<Batter[]>(res, 'Failed to load batters');
   },
 
   async getBowlers(actionableOnly = false, search?: string, sortBy = 'bowpri_score', ascending = false): Promise<Bowler[]> {
@@ -126,32 +162,27 @@ export const api = {
     params.append('sort_by', sortBy);
     params.append('ascending', String(ascending));
     const res = await fetch(`${API_BASE}/players/bowlers?${params.toString()}`);
-    if (!res.ok) throw new Error('Failed to load bowlers');
-    return res.json();
+    return handleResponse<Bowler[]>(res, 'Failed to load bowlers');
   },
 
   async getPlayerProfile(playerId: number): Promise<any> {
     const res = await fetch(`${API_BASE}/players/${playerId}`);
-    if (!res.ok) throw new Error(`Player ${playerId} not found`);
-    return res.json();
+    return handleResponse<any>(res, `Player ${playerId} not found`);
   },
 
   async comparePlayers(playerAId: number, playerBId: number, playerType: 'batter' | 'bowler'): Promise<CompareResult> {
     const res = await fetch(`${API_BASE}/compare?player_a_id=${playerAId}&player_b_id=${playerBId}&player_type=${playerType}`);
-    if (!res.ok) throw new Error('Failed to compare players');
-    return res.json();
+    return handleResponse<CompareResult>(res, 'Failed to compare players');
   },
 
   async getPressureSummary(): Promise<any> {
     const res = await fetch(`${API_BASE}/pressure/summary`);
-    if (!res.ok) throw new Error('Failed to load pressure summary');
-    return res.json();
+    return handleResponse<any>(res, 'Failed to load pressure summary');
   },
 
   async getAuctionTargets(): Promise<any[]> {
     const res = await fetch(`${API_BASE}/auction/targets`);
-    if (!res.ok) throw new Error('Failed to load auction targets');
-    return res.json();
+    return handleResponse<any[]>(res, 'Failed to load auction targets');
   },
 
   async simulateAuction(remainingPurse: number, bids: Record<string, number>): Promise<any> {
@@ -160,14 +191,11 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ remaining_purse: remainingPurse, bids })
     });
-    if (!res.ok) throw new Error('Failed to run auction simulation');
-    return res.json();
+    return handleResponse<any>(res, 'Failed to run auction simulation');
   },
 
   async getMethodology(): Promise<any> {
     const res = await fetch(`${API_BASE}/methodology`);
-    if (!res.ok) throw new Error('Failed to load methodology');
-    return res.json();
+    return handleResponse<any>(res, 'Failed to load methodology');
   }
 };
-

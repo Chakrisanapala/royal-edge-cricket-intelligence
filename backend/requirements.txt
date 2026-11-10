@@ -1,0 +1,9 @@
+# ROYAL EDGE FastAPI Backend Dependencies for Render Deployment
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.0.0
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+pyarrow>=12.0.0
+
