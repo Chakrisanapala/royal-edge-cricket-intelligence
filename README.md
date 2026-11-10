@@ -78,6 +78,18 @@ python src/validation.py
 streamlit run dashboard/app.py
 ```
 
+### 4. Deploy the React Frontend to Netlify
+
+The React/Vite app lives in `frontend/`. The root `netlify.toml` sets
+Netlify's base directory to `frontend`, runs `npm run build` there, and
+publishes `frontend/dist` (the publish path `dist` is relative to the base).
+Netlify installs the dependencies from `frontend/package-lock.json` before
+running the build. A fallback redirect supports direct links to React Router
+pages.
+
+The Python analytics pipeline and backend are separate from this static
+frontend deployment; Vite's local API proxy does not run in production.
+
 ---
 
 ## 🏆 Official Final Rankings (Unstop Submission Reference)
